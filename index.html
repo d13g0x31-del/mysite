@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankiPlace — выгодные финансовые продукты: карты, вклады, займы, бизнес</title>
+    <meta name="description" content="BankiPlace — маркетплейс финансовых продуктов: дебетовые и кредитные карты, вклады, займы, РКО и регистрация бизнеса. Сравнивайте и оформляйте онлайн.">
+    <meta name="keywords" content="дебетовые карты, кредитные карты, вклады, займы, РКО, регистрация бизнеса, кэшбэк">
+    
+    <meta property="og:title" content="BankiPlace — выгодные финансовые продукты">
+    <meta property="og:description" content="Карты, вклады, займы и бизнес-продукты. Выбирайте и оформляйте онлайн.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bankiplace.ru/">
+    <meta property="og:site_name" content="BankiPlace">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="logo">Banki<span>Place</span></a>
+            <nav class="nav">
+                <a href="#categories">Продукты</a>
+                <a href="#calculators">Калькуляторы</a>
+                <a href="#about">О проекте</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Выгодные финансовые продукты<br>в одном месте</h1>
+            <p>Сравнивайте карты, вклады, займы и бизнес-продукты. Выбирайте подходящий вариант и оформляйте онлайн.</p>
+            <a href="#categories" class="btn btn--primary">Смотреть продукты</a>
+        </div>
+    </section>
+
+    <!-- КАТЕГОРИИ -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2>Выберите категорию</h2>
+            <div class="categories__grid">
+                <button class="category-card category-card--cards" data-filter-trigger="cards">
+                    <span class="category-card__icon">💳</span>
+                    <span class="category-card__title">Дебетовые карты</span>
+                    <span class="category-card__desc">Кэшбэк, процент на остаток</span>
+                </button>
+                <button class="category-card category-card--credit" data-filter-trigger="credit">
+                    <span class="category-card__icon">🏦</span>
+                    <span class="category-card__title">Кредитные карты</span>
+                    <span class="category-card__desc">Беспроцентный период, рассрочка</span>
+                </button>
+                <button class="category-card category-card--deposit" data-filter-trigger="deposit">
+                    <span class="category-card__icon">📈</span>
+                    <span class="category-card__title">Вклады</span>
+                    <span class="category-card__desc">Выгодные ставки</span>
+                </button>
+                <button class="category-card category-card--loans" data-filter-trigger="loans">
+                    <span class="category-card__icon">💰</span>
+                    <span class="category-card__title">Займы</span>
+                    <span class="category-card__desc">Быстрые займы онлайн</span>
+                </button>
+                <button class="category-card category-card--business" data-filter-trigger="business">
+                    <span class="category-card__icon">💼</span>
+                    <span class="category-card__title">Бизнес</span>
+                    <span class="category-card__desc">РКО, регистрация бизнеса</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАЛЬКУЛЯТОРЫ -->
+    <section class="calculators" id="calculators">
+        <div class="container">
+            <h2>Рассчитайте выгоду</h2>
+            <div class="calc-grid">
+                <!-- Калькулятор вклада -->
+                <div class="calc-card">
+                    <h3>📈 Калькулятор вклада</h3>
+                    <div class="calc-form">
+                        <label>Сумма вклада (₽)</label>
+                        <input type="number" id="depositAmount" placeholder="100000" min="0">
+                        <label>Ставка (% годовых)</label>
+                        <input type="number" id="depositRate" placeholder="18" min="0" step="0.1">
+                        <label>Срок (месяцев)</label>
+                        <input type="number" id="depositTerm" placeholder="12" min="1" max="120">
+                        <button class="btn btn--card" onclick="calcDeposit()">Рассчитать</button>
+                    </div>
+                    <div class="calc-result" id="depositResult"></div>
+                </div>
+
+                <!-- Калькулятор займа -->
+                <div class="calc-card">
+                    <h3>💰 Калькулятор займа</h3>
+                    <div class="calc-form">
+                        <label>Сумма займа (₽)</label>
+                        <input type="number" id="loanAmount" placeholder="30000" min="0">
+                        <label>Ставка (% в день)</label>
+                        <input type="number" id="loanRate" placeholder="1" min="0" step="0.1">
+                        <label>Срок (дней)</label>
+                        <input type="number" id="loanTerm" placeholder="30" min="1" max="365">
+                        <button class="btn btn--card" onclick="calcLoan()">Рассчитать</button>
+                    </div>
+                    <div class="calc-result" id="loanResult"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2>Лучшие предложения</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="cards">Дебетовые</button>
+                <button class="filter-btn" data-filter="credit">Кредитные</button>
+                <button class="filter-btn" data-filter="deposit">Вклады</button>
+                <button class="filter-btn" data-filter="loans">Займы</button>
+                <button class="filter-btn" data-filter="business">Бизнес</button>
+            </div>
+
+            <div class="grid" id="productGrid">
+                
+                <!-- ДЕБЕТОВЫЕ КАРТЫ -->
+                <div class="card" data-category="cards">
+                    <div class="card__tag">Кэшбэк до 50%</div>
+                    <div class="card__bank-logo logo--vtb">ВТБ</div>
+                    <h3 class="card__title">Дебетовая карта МИР</h3>
+                    <p class="card__bank">Банк ВТБ</p>
+                    <ul class="card__features">
+                        <li><b>До 3 000 ₽/мес</b> кэшбэк рублями</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li><b>До 50%</b> у партнёров</li>
+                    </ul>
+                    <a href="https://u-cpa.ru/offer/rs/2kktqbn0vhg02/38ynycdkfpvoc/?partner=215481&erid=Kra23hiMc&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <div class="card" data-category="cards">
+                    <div class="card__tag">Хит для новичков</div>
+                    <div class="card__bank-logo logo--psb">ПСБ</div>
+                    <h3 class="card__title">ДК «Твой кэшбэк» МИР</h3>
+                    <p class="card__bank">Промсвязьбанк</p>
+                    <ul class="card__features">
+                        <li><b>До 5%</b> в выбранных категориях</li>
+                        <li><b>1%</b> на все покупки</li>
+                        <li><b>10%</b> на маркетплейсы</li>
+                    </ul>
+                    <a href="https://trk.ppdu.ru/click?uid=271515&oid=1353&erid=2SDnjehD1C8" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <div class="card" data-category="cards">
+                    <div class="card__tag">Выгода на ЖКУ</div>
+                    <div class="card__bank-logo logo--ubrr">УБРиР</div>
+                    <h3 class="card__title">ДК «Моя жизнь» МИР</h3>
+                    <p class="card__bank">УБРиР</p>
+                    <ul class="card__features">
+                        <li><b>До 5%</b> кэшбэк за ЖКУ</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                    </ul>
+                    <a href="https://trk.ppdu.ru/click?uid=271515&oid=2298&erid=2SDnjdsbvtS" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <!-- КРЕДИТНЫЕ КАРТЫ -->
+                <div class="card" data-category="credit">
+                    <div class="card__tag">Кэшбэк до 15%</div>
+                    <div class="card__bank-logo logo--vtb">ВТБ</div>
+                    <h3 class="card__title">Кредитная карта</h3>
+                    <p class="card__bank">Банк ВТБ</p>
+                    <ul class="card__features">
+                        <li><b>До 110 дней</b> на покупки</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li><b>До 15%</b> кэшбэк</li>
+                    </ul>
+                    <a href="https://u-cpa.ru/offer/rs/2y3t5vlo0y7ze/3n91cojklf9oe/?partner=215481&erid=2SDnjeyZW6n&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <div class="card" data-category="credit">
+                    <div class="card__tag">Цифровая карта</div>
+                    <div class="card__bank-logo logo--yandex">Яндекс</div>
+                    <h3 class="card__title">Кредитная карта Супер Сплит</h3>
+                    <p class="card__bank">Яндекс Банк</p>
+                    <ul class="card__features">
+                        <li><b>До 2 мес</b> с подпиской Плюс</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li>Можно заказать пластик</li>
+                    </ul>
+                    <a href="https://trk.ppdu.ru/click?uid=271515&oid=2684&erid=2SDnjdJuo9L" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <div class="card" data-category="credit">
+                    <div class="card__tag">120 дней без %</div>
+                    <div class="card__bank-logo logo--otp">ОТП</div>
+                    <h3 class="card__title">Кредитная карта 120 дней без %</h3>
+                    <p class="card__bank">ОТП Банк</p>
+                    <ul class="card__features">
+                        <li><b>120 дней</b> без процентов</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li><b>До 10%</b> кэшбэк</li>
+                    </ul>
+                    <a href="https://u-cpa.ru/offer/rs/3jrnst4ktohhh/3m2p2ipmrnr90/?partner=215481&erid=2SDnjdhSY8r&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <div class="card" data-category="credit">
+                    <div class="card__tag">Рассрочка до 12 мес</div>
+                    <div class="card__bank-logo logo--tbank">Т-Банк</div>
+                    <h3 class="card__title">Кредитная карта Платинум</h3>
+                    <p class="card__bank">Т-Банк</p>
+                    <ul class="card__features">
+                        <li><b>До 55 дней</b> без процентов</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li>Рассрочка до 12 мес</li>
+                    </ul>
+                    <a href="https://u-cpa.ru/offer/rs/3mfdk3hwwx3iu/3q8s9nqp1qx31/?partner=215481&erid=2SDnjcK72Dz&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <!-- ВКЛАДЫ (заглушка) -->
+                <div class="card" data-category="deposit">
+                    <div class="card__tag">Скоро</div>
+                    <div class="card__bank-logo logo--deposit">Вклад</div>
+                    <h3 class="card__title">Вклады скоро появятся</h3>
+                    <p class="card__bank">Лучшие ставки от банков</p>
+                    <ul class="card__features">
+                        <li>Ставки до 20%</li>
+                        <li>Надёжные банки</li>
+                    </ul>
+                    <button class="btn btn--card" disabled>Скоро</button>
+                </div>
+
+                <!-- ЗАЙМЫ (заглушка) -->
+                <div class="card" data-category="loans">
+                    <div class="card__tag">Скоро</div>
+                    <div class="card__bank-logo logo--loans">Займ</div>
+                    <h3 class="card__title">Займы скоро появятся</h3>
+                    <p class="card__bank">МФО с быстрым одобрением</p>
+                    <ul class="card__features">
+                        <li>До 100 000 ₽</li>
+                        <li>Ставка от 0% для новых</li>
+                    </ul>
+                    <button class="btn btn--card" disabled>Скоро</button>
+                </div>
+
+                <!-- БИЗНЕС (заглушка) -->
+                <div class="card" data-category="business">
+                    <div class="card__tag">Скоро</div>
+                    <div class="card__bank-logo logo--business">Бизнес</div>
+                    <h3 class="card__title">Бизнес-продукты</h3>
+                    <p class="card__bank">РКО, регистрация бизнеса</p>
+                    <ul class="card__features">
+                        <li>РКО от 0 ₽</li>
+                        <li>Регистрация под ключ</li>
+                    </ul>
+                    <button class="btn btn--card" disabled>Скоро</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- О ПРОЕКТЕ -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Как работает BankiPlace</h2>
+            <p>Мы анализируем рынок финансовых услуг и отбираем для вас только самые выгодные и проверенные предложения. Вам не нужно искать по десяткам сайтов — вся информация собрана в одном месте.</p>
+            <p><small>Сайт является информационной витриной и не является банком или финансовой организацией. Мы используем партнерские ссылки.</small></p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Что такое кэшбэк?</h3>
+                    <p>Кэшбэк — это возврат части денег за покупки. Банк начисляет его в рублях или баллах.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Это безопасно — оформлять через интернет?</h3>
+                    <p>Да. Переходя по кнопке «Оформить», вы попадаете на официальный сайт банка.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Сколько стоит обслуживание?</h3>
+                    <p>В наших подборках — карты с бесплатным обслуживанием или с простыми условиями.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 BankiPlace. Все права защищены.</p>
+            <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

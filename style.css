@@ -1,0 +1,405 @@
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text);
+    text-decoration: none;
+}
+.logo span { color: var(--primary); }
+
+.nav a {
+    margin-right: 24px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.nav a:hover { color: var(--primary); }
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.2s;
+    display: inline-block;
+    text-align: center;
+}
+.btn--primary {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    margin-top: 24px;
+    text-decoration: none;
+}
+.btn--primary:hover { background: var(--primary-hover); }
+
+/* Hero */
+.hero {
+    background: #fff;
+    padding: 70px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+.hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+.hero p {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Категории */
+.categories {
+    padding: 50px 0 10px;
+}
+.categories h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+.categories__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+.category-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    cursor: pointer;
+    transition: 0.25s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: var(--text);
+}
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    border-color: var(--primary);
+}
+.category-card__icon { font-size: 32px; line-height: 1; }
+.category-card__title { font-size: 18px; font-weight: 700; }
+.category-card__desc { font-size: 13px; color: var(--text-muted); }
+.category-card--cards:hover { border-color: #2563eb; }
+.category-card--credit:hover { border-color: #dc2626; }
+.category-card--deposit:hover { border-color: #16a34a; }
+.category-card--loans:hover { border-color: #f59e0b; }
+.category-card--business:hover { border-color: #7c3aed; }
+
+/* Калькуляторы */
+.calculators {
+    padding: 50px 0;
+}
+.calculators h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+.calc-card {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid var(--border);
+}
+.calc-card h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.calc-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+.calc-form input {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: 0.2s;
+}
+.calc-form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.calc-result {
+    margin-top: 16px;
+    padding: 16px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    font-size: 15px;
+    display: none;
+}
+.calc-result.show { display: block; }
+.calc-result b { color: var(--text); font-size: 18px; }
+
+/* Каталог */
+.catalog { padding: 50px 0; }
+.catalog h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    background: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+    font-size: 15px;
+}
+.filter-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+/* Карточка */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.2s;
+}
+.card:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    transform: translateY(-3px);
+}
+.card__tag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.card__bank-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 13px;
+    color: #fff;
+    background: #64748b;
+    overflow: hidden;
+    text-align: center;
+    padding: 4px;
+    line-height: 1.2;
+}
+
+/* Цвета банков */
+.logo--vtb { background: #0a2896; }
+.logo--psb { background: #ff5a00; }
+.logo--ubrr { background: #00a94f; }
+.logo--yandex { background: #fc3f1d; }
+.logo--otp { background: #007a3d; }
+.logo--tbank { background: #111; }
+.logo--loans { background: #f59e0b; }
+.logo--deposit { background: #16a34a; }
+.logo--business { background: #7c3aed; }
+.logo--rko { background: #0891b2; }
+
+.card__title { font-size: 18px; margin-bottom: 4px; font-weight: 700; }
+.card__bank { color: var(--text-muted); font-size: 14px; margin-bottom: 16px; }
+.card__features {
+    list-style: none;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+.card__features li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+.card__features b { color: var(--text); }
+.btn--card {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    cursor: pointer;
+}
+.btn--card:hover { background: var(--primary-hover); }
+.btn--card:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* О проекте */
+.about {
+    background: #fff;
+    padding: 50px 0;
+    border-top: 1px solid var(--border);
+}
+.about h2 { font-size: 28px; margin-bottom: 20px; }
+.about p { color: var(--text-muted); max-width: 800px; margin-bottom: 16px; }
+
+/* FAQ */
+.faq {
+    background: #f1f5f9;
+    padding: 50px 0;
+    border-top: 1px solid var(--border);
+}
+.faq h2 { font-size: 28px; margin-bottom: 24px; }
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.faq-item {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 1px solid var(--border);
+}
+.faq-item h3 { font-size: 17px; margin-bottom: 10px; font-weight: 700; }
+.faq-item p { color: var(--text-muted); font-size: 14px; }
+
+/* Футер */
+.footer {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 30px 0;
+    font-size: 14px;
+    text-align: center;
+}
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.footer__link { color: #fff; text-decoration: none; }
+.footer__link:hover { text-decoration: underline; }
+
+/* Кнопка наверх */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    z-index: 999;
+}
+.scroll-top.show { display: flex !important; }
+.scroll-top:hover {
+    background: var(--primary-hover);
+    transform: translateY(-4px);
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 30px; }
+    .nav a { display: none; }
+    .scroll-top { bottom: 20px; right: 20px; }
+}
