@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankiPlace — выгодные банковские карты с кэшбэком и беспроцентным периодом</title>
+    <meta name="description" content="BankiPlace — подбор дебетовых и кредитных карт с кэшбэком до 50%, беспроцентным периодом до 120 дней и бесплатным обслуживанием. Переходите на сайт банка и оформляйте онлайн.">
+    <meta name="keywords" content="дебетовые карты, кредитные карты, кэшбэк, бесплатное обслуживание, банковские карты">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="BankiPlace — выгодные банковские карты">
+    <meta property="og:description" content="Кэшбэк до 50%, беспроцентный период до 120 дней, бесплатное обслуживание. Выбирайте и оформляйте онлайн.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bankiplace.ru/">
+    <meta property="og:site_name" content="BankiPlace">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Микроразметка Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Лучшие банковские карты",
+        "url": "https://bankiplace.ru/#catalog",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Дебетовая карта МИР от ВТБ",
+                "description": "Кэшбэк до 50% у партнёров, бесплатное обслуживание"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Кредитная карта 120 дней без % от ОТП Банка",
+                "description": "Беспроцентный период 120 дней, кэшбэк до 10%"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Кредитная карта Платинум от Т-Банка",
+                "description": "Рассрочка до 12 месяцев, бесплатное обслуживание"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="logo">Banki<span>Place</span></a>
+            <nav class="nav">
+                <a href="#catalog">Каталог</a>
+                <a href="#about">О проекте</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+        <div class="container">
+            <h1>Выгодные банковские карты<br>в одном месте</h1>
+            <p>Сравнивайте условия по кэшбэку, беспроцентному периоду и обслуживанию. Выбирайте подходящий вариант и оформляйте карту прямо на сайте банка.</p>
+            <a href="#catalog" class="btn btn--primary">Смотреть карты</a>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2>Лучшие предложения</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все продукты</button>
+                <button class="filter-btn" data-filter="cards">Дебетовые карты</button>
+                <button class="filter-btn" data-filter="credit">Кредитные карты</button>
+                <button class="filter-btn" data-filter="deposit">Вклады</button>
+            </div>
+
+            <div class="grid" id="productGrid">
+                
+                <!-- КАРТОЧКА 1: ВТБ Дебетовая -->
+                <div class="card" data-category="cards">
+                    <div class="card__tag">Кэшбэк до 50%</div>
+                    <img src="https://logo.clearbit.com/vtb.ru" alt="ВТБ" class="card__logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card__bank-logo',textContent:'ВТБ'}))">
+                    <h3 class="card__title">Дебетовая карта МИР</h3>
+                    <p class="card__bank">Банк ВТБ</p>
+                    <ul class="card__features">
+                        <li><b>До 3 000 ₽/мес</b> кэшбэк рублями</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li><b>До 50%</b> за покупки у партнёров</li>
+                    </ul>
+                    <a href="https://u-cpa.ru/offer/rs/2kktqbn0vhg02/38ynycdkfpvoc/?partner=215481&erid=Kra23hiMc&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <!-- КАРТОЧКА 2: ПСБ Дебетовая -->
+                <div class="card" data-category="cards">
+                    <div class="card__tag">Хит для новичков</div>
+                    <img src="https://logo.clearbit.com/psbank.ru" alt="ПСБ" class="card__logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card__bank-logo',textContent:'ПСБ'}))">
+                    <h3 class="card__title">ДК «Твой кэшбэк» МИР</h3>
+                    <p class="card__bank">Промсвязьбанк</p>
+                    <ul class="card__features">
+                        <li><b>До 5%</b> в выбранных категориях</li>
+                        <li><b>1%</b> на все покупки</li>
+                        <li><b>10%</b> на маркетплейсы для новых клиентов</li>
+                    </ul>
+                    <a href="https://trk.ppdu.ru/click?uid=271515&oid=1353&erid=2SDnjehD1C8" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <!-- КАРТОЧКА 3: УБРиР Дебетовая -->
+                <div class="card" data-category="cards">
+                    <div class="card__tag">Выгода на ЖКУ</div>
+                    <img src="https://logo.clearbit.com/ubrr.ru" alt="УБРиР" class="card__logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card__bank-logo',textContent:'УБРиР'}))">
+                    <h3 class="card__title">ДК «Моя жизнь» МИР</h3>
+                    <p class="card__bank">Уральский банк реконструкции и развития</p>
+                    <ul class="card__features">
+                        <li><b>До 5%</b> кэшбэк за ЖКУ</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                    </ul>
+                    <a href="https://trk.ppdu.ru/click?uid=271515&oid=2298&erid=2SDnjdsbvtS" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <!-- КАРТОЧКА 4: ВТБ Кредитная -->
+                <div class="card" data-category="credit">
+                    <div class="card__tag">Кэшбэк до 15%</div>
+                    <img src="https://logo.clearbit.com/vtb.ru" alt="ВТБ" class="card__logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card__bank-logo',textContent:'ВТБ'}))">
+                    <h3 class="card__title">Кредитная карта</h3>
+                    <p class="card__bank">Банк ВТБ</p>
+                    <ul class="card__features">
+                        <li><b>До 110 дней</b> на покупки</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li><b>До 15%</b> кэшбэк в выбранных категориях</li>
+                    </ul>
+                    <a href="https://u-cpa.ru/offer/rs/2y3t5vlo0y7ze/3n91cojklf9oe/?partner=215481&erid=2SDnjeyZW6n&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <!-- КАРТОЧКА 5: Яндекс Банк Кредитная -->
+                <div class="card" data-category="credit">
+                    <div class="card__tag">Цифровая карта</div>
+                    <img src="https://logo.clearbit.com/bank.yandex.ru" alt="Яндекс Банк" class="card__logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card__bank-logo',textContent:'Яндекс'}))">
+                    <h3 class="card__title">Кредитная карта Супер Сплит</h3>
+                    <p class="card__bank">Яндекс Банк</p>
+                    <ul class="card__features">
+                        <li><b>До 2 мес</b> с подпиской Яндекс Плюс</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li>Можно заказать пластик</li>
+                    </ul>
+                    <a href="https://trk.ppdu.ru/click?uid=271515&oid=2684&erid=2SDnjdJuo9L" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <!-- КАРТОЧКА 6: ОТП Банк Кредитная -->
+                <div class="card" data-category="credit">
+                    <div class="card__tag">120 дней без %</div>
+                    <img src="https://logo.clearbit.com/otpbank.ru" alt="ОТП Банк" class="card__logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card__bank-logo',textContent:'ОТП'}))">
+                    <h3 class="card__title">Кредитная карта 120 дней без %</h3>
+                    <p class="card__bank">ОТП Банк</p>
+                    <ul class="card__features">
+                        <li><b>120 дней</b> беспроцентный период</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li><b>До 10%</b> кэшбэк в 5 категориях</li>
+                    </ul>
+                    <a href="https://u-cpa.ru/offer/rs/3jrnst4ktohhh/3m2p2ipmrnr90/?partner=215481&erid=2SDnjdhSY8r&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+                <!-- КАРТОЧКА 7: Т-Банк Кредитная -->
+                <div class="card" data-category="credit">
+                    <div class="card__tag">Рассрочка до 12 мес</div>
+                    <img src="https://logo.clearbit.com/tbank.ru" alt="Т-Банк" class="card__logo" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'card__bank-logo',textContent:'Т-Банк'}))">
+                    <h3 class="card__title">Кредитная карта Платинум</h3>
+                    <p class="card__bank">Т-Банк</p>
+                    <ul class="card__features">
+                        <li><b>До 55 дней</b> без процентов</li>
+                        <li><b>Бесплатное</b> обслуживание</li>
+                        <li>Рассрочка до 12 мес</li>
+                    </ul>
+                    <a href="https://u-cpa.ru/offer/rs/3mfdk3hwwx3iu/3q8s9nqp1qx31/?partner=215481&erid=2SDnjcK72Dz&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить карту</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- О ПРОЕКТЕ -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Как работает BankiPlace</h2>
+            <p>Мы анализируем рынок банковских услуг и отбираем для вас только самые выгодные и проверенные предложения. Вам не нужно искать по десяткам сайтов — вся информация собрана в одном месте. Переходя по кнопке «Оформить», вы попадаете на официальный сайт выбранного банка.</p>
+            <p><small>Сайт является информационной витриной и не является банком или финансовой организацией. Мы используем партнерские ссылки.</small></p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            <div class="faq-item">
+                <h3>Что такое кэшбэк?</h3>
+                <p>Кэшбэк — это возврат части денег за покупки. Банк начисляет его в рублях или баллах, которые можно потратить на следующие покупки или компенсировать ими часть расходов.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Это безопасно — оформлять карту через интернет?</h3>
+                <p>Да. Переходя по кнопке «Оформить», вы попадаете на официальный сайт выбранного банка, где заполняете анкету. Все данные защищены банком.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Сколько стоит обслуживание?</h3>
+                <p>В наших подборках — карты с бесплатным обслуживанием или с простыми условиями, при которых плата не взимается.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 BankiPlace. Все права защищены.</p>
+            <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </div>
+    </footer>
+
+    <!-- КНОПКА НАВЕРХ -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <script src="script.js"></script>
+    
+    <!-- Скрипт для кнопки наверх -->
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
