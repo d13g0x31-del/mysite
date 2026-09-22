@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankiPlace — выгодные финансовые продукты: карты, вклады, займы</title>
+    <meta name="description" content="BankiPlace — маркетплейс финансовых продуктов: дебетовые и кредитные карты, вклады, займы. Сравнивайте условия и оформляйте онлайн.">
+    <meta name="keywords" content="дебетовые карты, кредитные карты, вклады, займы, кэшбэк, банковские карты">
+    <meta property="og:title" content="BankiPlace — выгодные финансовые продукты">
+    <meta property="og:description" content="Карты, вклады и займы. Выбирайте и оформляйте онлайн.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bankiplace.ru/">
+    <meta property="og:site_name" content="BankiPlace">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">Banki<span>Place</span></a>
+            <nav class="nav">
+                <a href="debit-cards.html">Дебетовые карты</a>
+                <a href="credit-cards.html">Кредитные карты</a>
+                <a href="loans.html">Займы</a>
+                <a href="deposits.html">Вклады</a>
+                <a href="business.html">Бизнес</a>
+                <a href="blog.html">Блог</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Выгодные финансовые продукты<br>в одном месте</h1>
+            <p>Сравнивайте карты, вклады и займы. Выбирайте подходящий вариант и оформляйте онлайн.</p>
+            <a href="catalog.html" class="btn btn--primary">Смотреть продукты</a>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2>Выберите категорию</h2>
+            <div class="categories__grid">
+                <a href="debit-cards.html" class="category-card category-card--cards">
+                    <span class="category-card__icon">💳</span>
+                    <span class="category-card__title">Дебетовые карты</span>
+                    <span class="category-card__desc">Кэшбэк, процент на остаток</span>
+                </a>
+                <a href="credit-cards.html" class="category-card category-card--credit">
+                    <span class="category-card__icon">🏦</span>
+                    <span class="category-card__title">Кредитные карты</span>
+                    <span class="category-card__desc">Беспроцентный период, рассрочка</span>
+                </a>
+                <a href="deposits.html" class="category-card category-card--deposit">
+                    <span class="category-card__icon">📈</span>
+                    <span class="category-card__title">Вклады</span>
+                    <span class="category-card__desc">Выгодные ставки</span>
+                </a>
+                <a href="loans.html" class="category-card category-card--loans">
+                    <span class="category-card__icon">💰</span>
+                    <span class="category-card__title">Займы</span>
+                    <span class="category-card__desc">Быстрые займы онлайн</span>
+                </a>
+                <a href="business.html" class="category-card category-card--business">
+                    <span class="category-card__icon">💼</span>
+                    <span class="category-card__title">Бизнес</span>
+                    <span class="category-card__desc">РКО, регистрация бизнеса</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculators" id="calculators">
+        <div class="container">
+            <h2>Рассчитайте выгоду</h2>
+            <div class="calc-grid">
+                <div class="calc-card">
+                    <h3>📈 Калькулятор вклада</h3>
+                    <div class="calc-form">
+                        <label>Сумма вклада (₽)</label>
+                        <input type="number" id="depositAmount" placeholder="100000" min="0">
+                        <label>Ставка (% годовых)</label>
+                        <input type="number" id="depositRate" placeholder="18" min="0" step="0.1">
+                        <label>Срок (месяцев)</label>
+                        <input type="number" id="depositTerm" placeholder="12" min="1" max="120">
+                        <button class="btn btn--card" onclick="calcDeposit()">Рассчитать</button>
+                    </div>
+                    <div class="calc-result" id="depositResult"></div>
+                </div>
+
+                <div class="calc-card">
+                    <h3>💰 Калькулятор займа</h3>
+                    <div class="calc-form">
+                        <label>Сумма займа (₽)</label>
+                        <input type="number" id="loanAmount" placeholder="30000" min="0">
+                        <label>Ставка (% в день)</label>
+                        <input type="number" id="loanRate" placeholder="1" min="0" step="0.1">
+                        <label>Срок (дней)</label>
+                        <input type="number" id="loanTerm" placeholder="30" min="1" max="365">
+                        <button class="btn btn--card" onclick="calcLoan()">Рассчитать</button>
+                    </div>
+                    <div class="calc-result" id="loanResult"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Как работает BankiPlace</h2>
+            <p>Мы анализируем рынок финансовых услуг и отбираем для вас только самые выгодные и проверенные предложения. Вам не нужно искать по десяткам сайтов — вся информация собрана в одном месте.</p>
+            <p><small>Сайт является информационной витриной и не является банком или финансовой организацией. Мы используем партнерские ссылки.</small></p>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Что такое кэшбэк?</h3>
+                    <p>Кэшбэк — это возврат части денег за покупки. Банк начисляет его в рублях или баллах.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Это безопасно — оформлять через интернет?</h3>
+                    <p>Да. Переходя по кнопке «Оформить», вы попадаете на официальный сайт банка.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Сколько стоит обслуживание?</h3>
+                    <p>В наших подборках — продукты с бесплатным обслуживанием или с простыми условиями.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <h4>BankiPlace</h4>
+                    <p>Маркетплейс финансовых продуктов. Помогаем выбрать лучшее.</p>
+                </div>
+                <div class="footer__col">
+                    <h4>Продукты</h4>
+                    <a href="debit-cards.html">Дебетовые карты</a>
+                    <a href="credit-cards.html">Кредитные карты</a>
+                    <a href="loans.html">Займы</a>
+                    <a href="deposits.html">Вклады</a>
+                </div>
+                <div class="footer__col">
+                    <h4>Информация</h4>
+                    <a href="blog.html">Блог</a>
+                    <a href="privacy.html">Политика конфиденциальности</a>
+                    <a href="terms.html">Пользовательское соглашение</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2026 BankiPlace. Все права защищены. 18+</p>
+                <div class="disclaimer">
+                    <p>BankiPlace не является банком, МФО, брокером или инвестиционным советником. Сайт носит исключительно информационный характер. Все продукты предоставляются соответствующими организациями. Перед оформлением проверяйте условия на официальном сайте партнёра.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
