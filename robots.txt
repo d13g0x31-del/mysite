@@ -1,0 +1,12 @@
+# Robots.txt для BankiPlace
+# https://bankiplace.ru
+
+User-agent: *
+Allow: /
+
+# Закрываем служебные страницы от индексации
+Disallow: /privacy.html
+Disallow: /terms.html
+
+# Указываем путь к sitemap
+Sitemap: https://bankiplace.ru/sitemap.xml
