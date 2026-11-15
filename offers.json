@@ -2,7 +2,7 @@
   "offers": [
     {
       "id": "vtb-debit-mir",
-      "status": "hidden",
+      "status": "active",
       "category": "debit-cards",
       "title": "Дебетовая карта МИР",
       "bank_name": "ВТБ",
