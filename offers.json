@@ -1,0 +1,28 @@
+{
+  "offers": [
+    {
+      "id": "vtb-debit-mir",
+      "status": "active",
+      "category": "cards",
+      "title": "Дебетовая карта МИР",
+      "url": "https://bankiplace.ru/offers/vtb-debit-mir",
+      "product_page": "product-vtb-debit-card.html"
+    },
+    {
+      "id": "maxcredit-loan",
+      "status": "active",
+      "category": "loans",
+      "title": "Займ MAX.CREDIT",
+      "url": "https://bankiplace.ru/offers/maxcredit-loan",
+      "product_page": "product-maxcredit-loan.html"
+    },
+    {
+      "id": "gpb-deposit",
+      "status": "active",
+      "category": "deposits",
+      "title": "Накопительный счёт «Доходный»",
+      "url": "https://bankiplace.ru/offers/gpb-deposit",
+      "product_page": "product-gpb-deposit.html"
+    }
+  ]
+}
