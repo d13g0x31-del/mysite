@@ -3,26 +3,202 @@
     {
       "id": "vtb-debit-mir",
       "status": "active",
-      "category": "cards",
+      "category": "debit-cards",
       "title": "Дебетовая карта МИР",
+      "bank_name": "ВТБ",
       "url": "https://bankiplace.ru/offers/vtb-debit-mir",
-      "product_page": "product-vtb-debit-card.html"
+      "product_page": "product-vtb-debit-card.html",
+      "features": []
+    },
+    {
+      "id": "psb-debit",
+      "status": "active",
+      "category": "debit-cards",
+      "title": "ДК «Твой кэшбэк» МИР",
+      "bank_name": "Промсвязьбанк",
+      "url": "https://bankiplace.ru/offers/psb-debit",
+      "product_page": "product-psb-debit-card.html",
+      "features": []
+    },
+    {
+      "id": "ubrr-debit",
+      "status": "active",
+      "category": "debit-cards",
+      "title": "ДК «Моя жизнь» МИР",
+      "bank_name": "УБРиР",
+      "url": "https://bankiplace.ru/offers/ubrr-debit",
+      "product_page": "product-ubrr-debit-card.html",
+      "features": []
+    },
+    {
+      "id": "otp-debit",
+      "status": "active",
+      "category": "debit-cards",
+      "title": "Дебетовая ОТП Карта",
+      "bank_name": "ОТП Банк",
+      "url": "https://bankiplace.ru/offers/otp-debit",
+      "product_page": "product-otp-debit-card.html",
+      "features": []
+    },
+    {
+      "id": "vtb-credit",
+      "status": "active",
+      "category": "credit-cards",
+      "title": "Кредитная карта",
+      "bank_name": "Банк ВТБ",
+      "url": "https://bankiplace.ru/offers/vtb-credit",
+      "product_page": "product-vtb-credit-card.html",
+      "features": []
+    },
+    {
+      "id": "yandex-super-split",
+      "status": "active",
+      "category": "credit-cards",
+      "title": "Кредитная карта Супер Сплит",
+      "bank_name": "Яндекс Банк",
+      "url": "https://bankiplace.ru/offers/yandex-super-split",
+      "product_page": "product-yandex-super-split.html",
+      "features": []
+    },
+    {
+      "id": "otp-credit",
+      "status": "active",
+      "category": "credit-cards",
+      "title": "Кредитная карта 120 дней без %",
+      "bank_name": "ОТП Банк",
+      "url": "https://bankiplace.ru/offers/otp-credit",
+      "product_page": "product-otp-credit-card.html",
+      "features": []
+    },
+    {
+      "id": "tbank-credit",
+      "status": "active",
+      "category": "credit-cards",
+      "title": "Кредитная карта Платинум",
+      "bank_name": "Т-Банк",
+      "url": "https://bankiplace.ru/offers/tbank-credit",
+      "product_page": "product-tbank-credit-card.html",
+      "features": []
+    },
+    {
+      "id": "zenit-credit",
+      "status": "active",
+      "category": "credit-cards",
+      "title": "Кредитная карта «120 + 120»",
+      "bank_name": "Банк ЗЕНИТ",
+      "url": "https://bankiplace.ru/offers/zenit-credit",
+      "product_page": "product-zenit-credit-card.html",
+      "features": []
+    },
+    {
+      "id": "uralsib-credit",
+      "status": "active",
+      "category": "credit-cards",
+      "title": "Кредитная карта",
+      "bank_name": "Банк Уралсиб",
+      "url": "https://bankiplace.ru/offers/uralsib-credit",
+      "product_page": "product-uralsib-credit-card.html",
+      "features": []
+    },
+    {
+      "id": "urban-card",
+      "status": "active",
+      "category": "credit-cards",
+      "title": "URBAN CARD",
+      "bank_name": "Кредит Европа Банк",
+      "url": "https://bankiplace.ru/offers/urban-card",
+      "product_page": "product-urban-card.html",
+      "features": []
     },
     {
       "id": "maxcredit-loan",
       "status": "active",
       "category": "loans",
-      "title": "Займ MAX.CREDIT",
+      "title": "MAX.CREDIT",
+      "bank_name": "МФО «Макс.Кредит»",
       "url": "https://bankiplace.ru/offers/maxcredit-loan",
-      "product_page": "product-maxcredit-loan.html"
+      "product_page": "product-maxcredit-loan.html",
+      "features": []
+    },
+    {
+      "id": "alfa-dengi",
+      "status": "active",
+      "category": "loans",
+      "title": "Альфа Деньги",
+      "bank_name": "МФО «А Деньги»",
+      "url": "https://bankiplace.ru/offers/alfa-dengi",
+      "product_page": "product-alfa-dengi-limit.html",
+      "features": []
+    },
+    {
+      "id": "smartcash-loan",
+      "status": "active",
+      "category": "loans",
+      "title": "Умные Наличные",
+      "bank_name": "МФО «Умные Наличные»",
+      "url": "https://bankiplace.ru/offers/smartcash-loan",
+      "product_page": "product-smartcash-loan.html",
+      "features": []
+    },
+    {
+      "id": "bistrodengi-loan",
+      "status": "active",
+      "category": "loans",
+      "title": "Быстроденьги",
+      "bank_name": "МФК «Быстроденьги»",
+      "url": "https://bankiplace.ru/offers/bistrodengi-loan",
+      "product_page": "product-bistrodengi-loan.html",
+      "features": []
+    },
+    {
+      "id": "moneyman-loan",
+      "status": "active",
+      "category": "loans",
+      "title": "MoneyMan",
+      "bank_name": "МФК «Мани Мен»",
+      "url": "https://bankiplace.ru/offers/moneyman-loan",
+      "product_page": "product-moneyman-loan.html",
+      "features": []
+    },
+    {
+      "id": "yandex-save",
+      "status": "active",
+      "category": "deposits",
+      "title": "Накопительный счёт Сейв",
+      "bank_name": "Яндекс Банк",
+      "url": "https://bankiplace.ru/offers/yandex-save",
+      "product_page": "product-yandex-save.html",
+      "features": []
     },
     {
       "id": "gpb-deposit",
       "status": "active",
       "category": "deposits",
       "title": "Накопительный счёт «Доходный»",
+      "bank_name": "Газпромбанк",
       "url": "https://bankiplace.ru/offers/gpb-deposit",
-      "product_page": "product-gpb-deposit.html"
+      "product_page": "product-gpb-deposit.html",
+      "features": []
+    },
+    {
+      "id": "gpb-newmoney",
+      "status": "active",
+      "category": "deposits",
+      "title": "Вклад «Новые деньги»",
+      "bank_name": "Газпромбанк",
+      "url": "https://bankiplace.ru/offers/gpb-newmoney",
+      "product_page": "product-gpb-newmoney.html",
+      "features": []
+    },
+    {
+      "id": "gpb-keymoment",
+      "status": "active",
+      "category": "deposits",
+      "title": "Вклад «Ключевой момент»",
+      "bank_name": "Газпромбанк",
+      "url": "https://bankiplace.ru/offers/gpb-keymoment",
+      "product_page": "product-gpb-keymoment.html",
+      "features": []
     }
   ]
 }
