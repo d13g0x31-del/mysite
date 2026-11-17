@@ -24,7 +24,6 @@
                 <a href="credit-cards.html">Кредитные карты</a>
                 <a href="loans.html" class="active">Займы</a>
                 <a href="deposits.html">Вклады</a>
-                <a href="business.html">Бизнес</a>
                 <a href="blog.html">Блог</a>
             </nav>
         </div>
@@ -40,6 +39,27 @@
     <section class="warning">
         <div class="container">
             <p>⚠️ <b>Внимание!</b> Займы — это финансовые обязательства. Оценивайте свою платёжеспособность перед оформлением. Просрочка может привести к начислению штрафов и пеней.</p>
+        </div>
+    </section>
+
+    <section class="calculators" id="calculators">
+        <div class="container">
+            <h2>Рассчитайте переплату по займу</h2>
+            <div class="calc-grid" style="max-width: 560px;">
+                <div class="calc-card">
+                    <h3>💰 Калькулятор займа</h3>
+                    <div class="calc-form">
+                        <label>Сумма займа (₽)</label>
+                        <input type="number" id="loanAmount" placeholder="30000" min="0">
+                        <label>Ставка (% в день)</label>
+                        <input type="number" id="loanRate" placeholder="1" min="0" step="0.1">
+                        <label>Срок (дней)</label>
+                        <input type="number" id="loanTerm" placeholder="30" min="1" max="365">
+                        <button class="btn btn--card" onclick="calcLoan()">Рассчитать</button>
+                    </div>
+                    <div class="calc-result" id="loanResult"></div>
+                </div>
+            </div>
         </div>
     </section>
 

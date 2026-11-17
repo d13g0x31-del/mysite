@@ -22,25 +22,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    <url>
-        <loc>https://bankiplace.ru/business.html</loc>
-        <lastmod>2026-09-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://bankiplace.ru/business-registration.html</loc>
-        <lastmod>2026-09-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://bankiplace.ru/rko.html</loc>
-        <lastmod>2026-09-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
     <!-- КАТЕГОРИИ ПРОДУКТОВ -->
     <url>
         <loc>https://bankiplace.ru/debit-cards.html</loc>
