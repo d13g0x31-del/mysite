@@ -850,3 +850,27 @@ section {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
+/* Специальные стили для карточек на главной (сетка) */
+.best-offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.best-offers-grid .card {
+    flex-direction: column;
+    height: 100%;
+}
+.best-offers-grid .card__body {
+    padding-right: 0;
+    width: 100%;
+}
+.best-offers-grid .card__actions {
+    width: 100%;
+    flex-direction: row;
+    margin-top: auto;
+}
+.best-offers-grid .card__actions .btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+}
