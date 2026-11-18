@@ -829,3 +829,24 @@ body {
 .card.is-hidden {
     display: none !important;
 }
+/* Исправляем слипание секций (воздух) */
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.hero {
+    padding-top: 70px; /* Для главного экрана оставляем побольше */
+}
+
+/* Стили для карточек шагов */
+.step-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
