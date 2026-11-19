@@ -46,6 +46,15 @@
                 <button class="filter-btn" data-filter="deposit">Вклады</button>
             </div>
 
+            <div class="catalog-controls" style="margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap;">
+    <input type="text" id="searchInput" placeholder="Поиск по названию..." style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; flex-grow: 1;">
+    <select id="sortSelect" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+        <option value="default">По умолчанию</option>
+        <option value="name-asc">Название (А-Я)</option>
+        <option value="name-desc">Название (Я-А)</option>
+    </select>
+</div>
+
             <div class="grid">
                 <div class="card" data-category="cards" data-offer-id="vtb-debit-mir">
                     <div class="card__bank-logo logo--vtb">ВТБ</div>
