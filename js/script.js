@@ -237,26 +237,78 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ============================================
-// АВТОМАТИЧЕСКОЕ ДОБАВЛЕНИЕ КНОПОК "СРАВНИТЬ"
+// ПОИСК И СОРТИРОВКА
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-    let compareList = JSON.parse(localStorage.getItem('compareList')) || [];
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const grid = document.querySelector('.grid');
     
-    // Находим все карточки на странице
+    // Если мы не на странице каталога, просто выходим
+    if (!searchInput || !sortSelect || !grid) return;
+
+    const cards = Array.from(grid.querySelectorAll('.card'));
+
+    function updateCatalog() {
+        const query = searchInput.value.toLowerCase();
+        const sortValue = sortSelect.value;
+
+        // 1. Сортировка
+        if (sortValue === 'name-asc') {
+            cards.sort((a, b) => {
+                const aText = a.querySelector('.card__title')?.textContent || '';
+                const bText = b.querySelector('.card__title')?.textContent || '';
+                return aText.localeCompare(bText);
+            });
+        } else if (sortValue === 'name-desc') {
+            cards.sort((a, b) => {
+                const aText = a.querySelector('.card__title')?.textContent || '';
+                const bText = b.querySelector('.card__title')?.textContent || '';
+                return bText.localeCompare(aText);
+            });
+        }
+
+        // 2. Фильтрация и перерисовка
+        grid.innerHTML = '';
+        cards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            if (text.includes(query)) {
+                card.style.display = 'flex'; // Или 'block' в зависимости от вашей верстки
+                grid.appendChild(card);
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    searchInput.addEventListener('input', updateCatalog);
+    sortSelect.addEventListener('change', updateCatalog);
+});
+
+// ============================================
+// СРАВНЕНИЕ ОФФЕРОВ
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Проверяем, есть ли вообще карточки на странице
     const cards = document.querySelectorAll('.card[data-offer-id]');
-    
+    if (cards.length === 0) return;
+
+    let compareList = JSON.parse(localStorage.getItem('compareList')) || [];
+
     cards.forEach(card => {
         const id = card.getAttribute('data-offer-id');
         const actions = card.querySelector('.card__actions');
         
         if (actions && id) {
-            // Создаем кнопку
+            // Проверяем, нет ли уже кнопки (чтобы не дублировать)
+            if (actions.querySelector('.btn-compare')) return;
+
             const btn = document.createElement('button');
             btn.className = 'btn btn--outline btn-compare';
             btn.setAttribute('data-id', id);
             btn.style.marginTop = '5px';
+            btn.style.width = '100%'; // На всякий случай
             
-            // Проверяем, выбрана ли она уже
             if (compareList.includes(id)) {
                 btn.textContent = 'В сравнении ✓';
                 btn.style.background = '#e0f2fe';
@@ -264,15 +316,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.textContent = 'Сравнить';
             }
             
-            // Добавляем обработчик клика
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault(); // Защита от перезагрузки
                 if (compareList.includes(id)) {
                     compareList = compareList.filter(item => item !== id);
                     btn.textContent = 'Сравнить';
                     btn.style.background = 'transparent';
                 } else {
                     if (compareList.length >= 3) {
-                        alert('Можно сравнивать не более 3 офферов одновременно.');
+                        alert('Можно сравнивать не более 3 офферов.');
                         return;
                     }
                     compareList.push(id);
@@ -287,26 +339,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Панель снизу
     function updateComparePanel() {
         let panel = document.getElementById('compare-panel');
         if (compareList.length > 0) {
             if (!panel) {
                 panel = document.createElement('div');
                 panel.id = 'compare-panel';
-                panel.style.cssText = 'position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; padding: 15px; border-radius: 10px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 15px;';
+                panel.style.cssText = 'position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; padding: 15px; border-radius: 10px; z-index: 1000; display: flex; gap: 15px; align-items: center;';
                 document.body.appendChild(panel);
             }
             panel.innerHTML = `
                 <span>Выбрано: ${compareList.length}</span>
                 <button onclick="window.location.href='compare.html'" style="background: #fff; color: #2563eb; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Сравнить</button>
-                <button onclick="localStorage.removeItem('compareList'); location.reload();" style="background: transparent; color: #fff; border: 1px solid #fff; padding: 8px 15px; border-radius: 5px; cursor: pointer;">Очистить</button>
             `;
         } else if (panel) {
             panel.remove();
         }
     }
     updateComparePanel();
-});
-    updateComparePanel(); // Показать панель при загрузке, если есть сохраненные элементы
 });
