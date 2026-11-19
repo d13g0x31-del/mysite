@@ -112,3 +112,22 @@ function calcLoan() {
     `;
     result.classList.add('show');
 }
+
+// --- Cookie Banner ---
+document.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem('cookieConsent')) {
+        const banner = document.createElement('div');
+        banner.id = 'cookie-banner';
+        banner.style.cssText = 'position: fixed; bottom: 0; left: 0; right: 0; background: #1e293b; color: #fff; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 9999; font-size: 14px; flex-wrap: wrap; gap: 10px;';
+        banner.innerHTML = `
+            <span>Мы используем файлы cookie для улучшения работы сайта. Продолжая просмотр, вы соглашаетесь с нашей <a href="/privacy.html" style="color: #93c5fd; text-decoration: underline;">политикой конфиденциальности</a>.</span>
+            <button id="accept-cookies" style="background: #2563eb; color: #fff; border: none; padding: 8px 20px; border-radius: 8px; cursor: pointer; font-weight: bold;">Принять</button>
+        `;
+        document.body.appendChild(banner);
+
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            banner.remove();
+        });
+    }
+});
