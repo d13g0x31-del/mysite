@@ -193,5 +193,120 @@ document.addEventListener('DOMContentLoaded', () => {
             panel.remove();
         }
     }
+
+    // ============================================
+// ПОИСК И СОРТИРОВКА (ИСПРАВЛЕНО)
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const grid = document.querySelector('.grid'); // Ищем любую сетку на странице
+    
+    if (searchInput && sortSelect && grid) {
+        const cards = Array.from(grid.querySelectorAll('.card'));
+
+        function updateCatalog() {
+            const query = searchInput.value.toLowerCase();
+            const sortValue = sortSelect.value;
+
+            let visibleCards = cards.filter(card => {
+                return card.textContent.toLowerCase().includes(query);
+            });
+
+            if (sortValue === 'name-asc') {
+                visibleCards.sort((a, b) => {
+                    const aText = a.querySelector('.card__title')?.textContent || '';
+                    const bText = b.querySelector('.card__title')?.textContent || '';
+                    return aText.localeCompare(bText);
+                });
+            } else if (sortValue === 'name-desc') {
+                visibleCards.sort((a, b) => {
+                    const aText = a.querySelector('.card__title')?.textContent || '';
+                    const bText = b.querySelector('.card__title')?.textContent || '';
+                    return bText.localeCompare(aText);
+                });
+            }
+
+            grid.innerHTML = '';
+            visibleCards.forEach(card => grid.appendChild(card));
+        }
+
+        searchInput.addEventListener('input', updateCatalog);
+        sortSelect.addEventListener('change', updateCatalog);
+    }
+});
+
+// ============================================
+// АВТОМАТИЧЕСКОЕ ДОБАВЛЕНИЕ КНОПОК "СРАВНИТЬ"
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    let compareList = JSON.parse(localStorage.getItem('compareList')) || [];
+    
+    // Находим все карточки на странице
+    const cards = document.querySelectorAll('.card[data-offer-id]');
+    
+    cards.forEach(card => {
+        const id = card.getAttribute('data-offer-id');
+        const actions = card.querySelector('.card__actions');
+        
+        if (actions && id) {
+            // Создаем кнопку
+            const btn = document.createElement('button');
+            btn.className = 'btn btn--outline btn-compare';
+            btn.setAttribute('data-id', id);
+            btn.style.marginTop = '5px';
+            
+            // Проверяем, выбрана ли она уже
+            if (compareList.includes(id)) {
+                btn.textContent = 'В сравнении ✓';
+                btn.style.background = '#e0f2fe';
+            } else {
+                btn.textContent = 'Сравнить';
+            }
+            
+            // Добавляем обработчик клика
+            btn.addEventListener('click', () => {
+                if (compareList.includes(id)) {
+                    compareList = compareList.filter(item => item !== id);
+                    btn.textContent = 'Сравнить';
+                    btn.style.background = 'transparent';
+                } else {
+                    if (compareList.length >= 3) {
+                        alert('Можно сравнивать не более 3 офферов одновременно.');
+                        return;
+                    }
+                    compareList.push(id);
+                    btn.textContent = 'В сравнении ✓';
+                    btn.style.background = '#e0f2fe';
+                }
+                localStorage.setItem('compareList', JSON.stringify(compareList));
+                updateComparePanel();
+            });
+
+            actions.appendChild(btn);
+        }
+    });
+
+    // Панель снизу
+    function updateComparePanel() {
+        let panel = document.getElementById('compare-panel');
+        if (compareList.length > 0) {
+            if (!panel) {
+                panel = document.createElement('div');
+                panel.id = 'compare-panel';
+                panel.style.cssText = 'position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; padding: 15px; border-radius: 10px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 15px;';
+                document.body.appendChild(panel);
+            }
+            panel.innerHTML = `
+                <span>Выбрано: ${compareList.length}</span>
+                <button onclick="window.location.href='compare.html'" style="background: #fff; color: #2563eb; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Сравнить</button>
+                <button onclick="localStorage.removeItem('compareList'); location.reload();" style="background: transparent; color: #fff; border: 1px solid #fff; padding: 8px 15px; border-radius: 5px; cursor: pointer;">Очистить</button>
+            `;
+        } else if (panel) {
+            panel.remove();
+        }
+    }
+    updateComparePanel();
+});
     updateComparePanel(); // Показать панель при загрузке, если есть сохраненные элементы
 });
