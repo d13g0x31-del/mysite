@@ -131,3 +131,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// --- Логика сравнения ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Загружаем сохраненный список сравнения
+    let compareList = JSON.parse(localStorage.getItem('compareList')) || [];
+
+    // Обновляем внешний вид всех кнопок при загрузке
+    document.querySelectorAll('.btn-compare').forEach(btn => {
+        const id = btn.getAttribute('data-id');
+        if (compareList.includes(id)) {
+            btn.textContent = 'В сравнении ✓';
+            btn.classList.add('active');
+        }
+    });
+
+    // Обработчик клика
+    document.body.addEventListener('click', (e) => {
+        if (e.target.classList.contains('btn-compare')) {
+            const btn = e.target;
+            const id = btn.getAttribute('data-id');
+            
+            if (compareList.includes(id)) {
+                // Удаляем из сравнения
+                compareList = compareList.filter(item => item !== id);
+                btn.textContent = 'Сравнить';
+                btn.classList.remove('active');
+            } else {
+                // Добавляем в сравнение
+                if (compareList.length >= 3) {
+                    alert('Можно сравнивать не более 3 офферов одновременно.');
+                    return;
+                }
+                compareList.push(id);
+                btn.textContent = 'В сравнении ✓';
+                btn.classList.add('active');
+            }
+            
+            // Сохраняем в localStorage
+            localStorage.setItem('compareList', JSON.stringify(compareList));
+            updateComparePanel();
+        }
+    });
+
+    // Панель сравнения (можно добавить на страницу)
+    function updateComparePanel() {
+        let panel = document.getElementById('compare-panel');
+        if (compareList.length > 0) {
+            if (!panel) {
+                panel = document.createElement('div');
+                panel.id = 'compare-panel';
+                panel.style.cssText = 'position: fixed; bottom: 20px; left: 20px; background: #2563eb; color: #fff; padding: 15px; border-radius: 10px; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.2);';
+                document.body.appendChild(panel);
+            }
+            panel.innerHTML = `
+                <span>Выбрано для сравнения: ${compareList.length}</span>
+                <button onclick="window.location.href='/compare.html'" style="margin-left: 15px; background: #fff; color: #2563eb; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Сравнить</button>
+                <button onclick="localStorage.removeItem('compareList'); location.reload();" style="margin-left: 10px; background: transparent; color: #fff; border: 1px solid #fff; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Очистить</button>
+            `;
+        } else if (panel) {
+            panel.remove();
+        }
+    }
+    updateComparePanel(); // Показать панель при загрузке, если есть сохраненные элементы
+});
