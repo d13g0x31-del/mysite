@@ -492,14 +492,7 @@
 
     <script src="js/script.js"></script>
 
-    document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('searchInput');
-    const sortSelect = document.getElementById('sortSelect');
-    const grid = document.querySelector('.grid'); // Убедитесь, что это правильный контейнер
     
-    if (!searchInput || !sortSelect || !grid) return;
-
-    const cards = Array.from(grid.querySelectorAll('.card'));
 
     // Функция фильтрации и сортировки
     function updateCatalog() {
