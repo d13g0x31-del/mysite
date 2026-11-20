@@ -45,9 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
         sortSelect.addEventListener('change', updateCatalog);
     }
 
-    // 3. СРАВНЕНИЕ ОФФЕРОВ
-    const cardsForCompare = document.querySelectorAll('.card[data-offer-id]');
-    if (cardsForCompare.length > 0) {
+        // 3. СРАВНЕНИЕ ОФФЕРОВ (только на странице каталога)
+    const catalogGrid = document.querySelector('.catalog .grid'); // Ищем сетку каталога
+    if (catalogGrid) {
+        const cardsForCompare = catalogGrid.querySelectorAll('.card[data-offer-id]');
         let compareList = JSON.parse(localStorage.getItem('compareList')) || [];
 
         cardsForCompare.forEach(card => {
