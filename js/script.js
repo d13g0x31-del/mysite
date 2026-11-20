@@ -45,6 +45,58 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ============================================
+    // ПОИСК И СОРТИРОВКА (только на странице каталога)
+    // ============================================
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const grid = document.querySelector('.grid');
+
+    if (searchInput && sortSelect && grid) {
+        const allCards = Array.from(grid.querySelectorAll('.card'));
+
+        function applySearchAndSort() {
+            const query = searchInput.value.toLowerCase().trim();
+            const sortValue = sortSelect.value;
+
+            // Фильтруем по названию (card__title) и банку (card__bank)
+            let visibleCards = allCards.filter(card => {
+                const title = (card.querySelector('.card__title')?.textContent || '').toLowerCase();
+                const bank = (card.querySelector('.card__bank')?.textContent || '').toLowerCase();
+                return title.includes(query) || bank.includes(query);
+            });
+
+            // Сортируем
+            if (sortValue === 'name-asc') {
+                visibleCards.sort((a, b) => {
+                    const aText = (a.querySelector('.card__title')?.textContent || '').toLowerCase();
+                    const bText = (b.querySelector('.card__title')?.textContent || '').toLowerCase();
+                    return aText.localeCompare(bText);
+                });
+            } else if (sortValue === 'name-desc') {
+                visibleCards.sort((a, b) => {
+                    const aText = (a.querySelector('.card__title')?.textContent || '').toLowerCase();
+                    const bText = (b.querySelector('.card__title')?.textContent || '').toLowerCase();
+                    return bText.localeCompare(aText);
+                });
+            }
+
+            // Перерисовываем: сначала отображаем подходящие, остальные скрываем
+            allCards.forEach(card => {
+                card.style.display = visibleCards.includes(card) ? '' : 'none';
+            });
+
+            // Прокручиваем к результату, если есть совпадения
+            if (query && visibleCards.length > 0) {
+                const firstVisible = visibleCards[0];
+                firstVisible.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        searchInput.addEventListener('input', applySearchAndSort);
+        sortSelect.addEventListener('change', applySearchAndSort);
+    }
+
+    // ============================================
     // КНОПКА НАВЕРХ
     // ============================================
     const scrollTopBtn = document.getElementById('scrollTop');
