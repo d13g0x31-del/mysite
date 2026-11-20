@@ -1,204 +1,298 @@
 {
-  "offers": [
-    {
-      "id": "vtb-debit-mir",
-      "status": "active",
-      "category": "debit-cards",
-      "title": "Дебетовая карта МИР",
-      "bank_name": "ВТБ",
-      "url": "https://u-cpa.ru/offer/rs/2kktqbn0vhg02/38ynycdkfpvoc/?partner=215481&erid=Kra23hiMc&platform_id=40513",
-      "product_page": "product-vtb-debit-card.html",
-      "features": []
-    },
-    {
-      "id": "psb-debit",
-      "status": "active",
-      "category": "debit-cards",
-      "title": "ДК «Твой кэшбэк» МИР",
-      "bank_name": "Промсвязьбанк",
-      "url": "https://trk.ppdu.ru/click?uid=271515&oid=1353&erid=2SDnjehD1C8",
-      "product_page": "product-psb-debit-card.html",
-      "features": []
-    },
-    {
-      "id": "ubrr-debit",
-      "status": "active",
-      "category": "debit-cards",
-      "title": "ДК «Моя жизнь» МИР",
-      "bank_name": "УБРиР",
-      "url": "https://u-cpa.ru/offer/rs/1867bp9622pll/24fa4yrmk2mdi/?partner=215481&erid=2SDnjd7A3GN&platform_id=40513",
-      "product_page": "product-ubrr-debit-card.html",
-      "features": []
-    },
-    {
-      "id": "otp-debit",
-      "status": "active",
-      "category": "debit-cards",
-      "title": "Дебетовая ОТП Карта",
-      "bank_name": "ОТП Банк",
-      "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=6626&p=11339&erid=2W5zFFwAUp9",
-      "product_page": "product-otp-debit-card.html",
-      "features": []
-    },
-    {
-      "id": "vtb-credit",
-      "status": "active",
-      "category": "credit-cards",
-      "title": "Кредитная карта",
-      "bank_name": "Банк ВТБ",
-      "url": "https://u-cpa.ru/offer/rs/2y3t5vlo0y7ze/3n91cojklf9oe/?partner=215481&erid=2SDnjeyZW6n&platform_id=40513",
-      "product_page": "product-vtb-credit-card.html",
-      "features": []
-    },
-    {
-      "id": "yandex-super-split",
-      "status": "active",
-      "category": "credit-cards",
-      "title": "Кредитная карта Супер Сплит",
-      "bank_name": "Яндекс Банк",
-      "url": "https://trk.ppdu.ru/click?uid=271515&oid=2684&erid=2SDnjdJuo9L",
-      "product_page": "product-yandex-super-split.html",
-      "features": []
-    },
-    {
-      "id": "otp-credit",
-      "status": "active",
-      "category": "credit-cards",
-      "title": "Кредитная карта 120 дней без %",
-      "bank_name": "ОТП Банк",
-      "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=7375&p=11339&erid=2W5zFFz8TNq",
-      "product_page": "product-otp-credit-card.html",
-      "features": []
-    },
-    {
-      "id": "tbank-credit",
-      "status": "active",
-      "category": "credit-cards",
-      "title": "Кредитная карта Платинум",
-      "bank_name": "Т-Банк",
-      "url": "https://u-cpa.ru/offer/rs/3mfdk3hwwx3iu/3q8s9nqp1qx31/?partner=215481&erid=2SDnjcK72Dz&platform_id=40513",
-      "product_page": "product-tbank-credit-card.html",
-      "features": []
-    },
-    {
-      "id": "zenit-credit",
-      "status": "active",
-      "category": "credit-cards",
-      "title": "Кредитная карта «120 + 120»",
-      "bank_name": "Банк ЗЕНИТ",
-      "url": "https://u-cpa.ru/offer/rs/z1ufkv46li5l/3ml4ysk2e5otz/?partner=215481&erid=2SDnjdkQATJ&platform_id=40513",
-      "product_page": "product-zenit-credit-card.html",
-      "features": []
-    },
-    {
-      "id": "uralsib-credit",
-      "status": "active",
-      "category": "credit-cards",
-      "title": "Кредитная карта",
-      "bank_name": "Банк Уралсиб",
-      "url": "https://trk.ppdu.ru/click?uid=271515&oid=1121&erid=2SDnjbpvGx2",
-      "product_page": "product-uralsib-credit-card.html",
-      "features": []
-    },
-    {
-      "id": "urban-card",
-      "status": "active",
-      "category": "credit-cards",
-      "title": "URBAN CARD",
-      "bank_name": "Кредит Европа Банк",
-      "url": "https://trk.ppdu.ru/click?uid=271515&oid=1489&erid=2SDnjdLFXE2",
-      "product_page": "product-urban-card.html",
-      "features": []
-    },
-    {
-      "id": "maxcredit-loan",
-      "status": "active",
-      "category": "loans",
-      "title": "MAX.CREDIT",
-      "bank_name": "МФО «Макс.Кредит»",
-      "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=5316&p=11339&erid=2W5zFK38Z1B",
-      "product_page": "product-maxcredit-loan.html",
-      "features": []
-    },
-    {
-      "id": "alfa-dengi",
-      "status": "active",
-      "category": "loans",
-      "title": "Альфа Деньги",
-      "bank_name": "МФО «А Деньги»",
-      "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=6362&p=11339&erid=2W5zFHq5MGm",
-      "product_page": "product-alfa-dengi-limit.html",
-      "features": []
-    },
-    {
-      "id": "smartcash-loan",
-      "status": "active",
-      "category": "loans",
-      "title": "Умные Наличные",
-      "bank_name": "МФО «Умные Наличные»",
-      "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=5562&p=11339&erid=2W5zFJaGS32",
-      "product_page": "product-smartcash-loan.html",
-      "features": []
-    },
-    {
-      "id": "bistrodengi-loan",
-      "status": "active",
-      "category": "loans",
-      "title": "Быстроденьги",
-      "bank_name": "МФК «Быстроденьги»",
-      "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=4464&p=11339&erid=2W5zFGAk8BT",
-      "product_page": "product-bistrodengi-loan.html",
-      "features": []
-    },
-    {
-      "id": "moneyman-loan",
-      "status": "active",
-      "category": "loans",
-      "title": "MoneyMan",
-      "bank_name": "МФК «Мани Мен»",
-      "url": "https://go.leadgid.ru/aff_c/?aff_id=122894&offer_id=5024&p=11339&erid=LjN8KHDvg",
-      "product_page": "product-moneyman-loan.html",
-      "features": []
-    },
-    {
-      "id": "yandex-save",
-      "status": "active",
-      "category": "deposits",
-      "title": "Накопительный счёт Сейв",
-      "bank_name": "Яндекс Банк",
-      "url": "https://trk.ppdu.ru/click?uid=271515&oid=2685&erid=2SDnjck9Tog",
-      "product_page": "product-yandex-save.html",
-      "features": []
-    },
-    {
-      "id": "gpb-deposit",
-      "status": "active",
-      "category": "deposits",
-      "title": "Накопительный счёт «Доходный»",
-      "bank_name": "Газпромбанк",
-      "url": "https://u-cpa.ru/offer/rs/3v3xnhlnk8f49/25sul61262zaw/?partner=215481&erid=2SDnjduAaZ1&platform_id=40513",
-      "product_page": "product-gpb-deposit.html",
-      "features": []
-    },
-    {
-      "id": "gpb-newmoney",
-      "status": "active",
-      "category": "deposits",
-      "title": "Вклад «Новые деньги»",
-      "bank_name": "Газпромбанк",
-      "url": "https://u-cpa.ru/offer/rs/117pd3xvgx9da/1b3xlltwjlt5/?partner=215481&erid=2SDnjd8UuRb&platform_id=40513",
-      "product_page": "product-gpb-newmoney.html",
-      "features": []
-    },
-    {
-      "id": "gpb-keymoment",
-      "status": "active",
-      "category": "deposits",
-      "title": "Вклад «Ключевой момент»",
-      "bank_name": "Газпромбанк",
-      "url": "https://u-cpa.ru/offer/rs/34abfh8bmkvcj/1d7eoiz16u2jc/?partner=215481&erid=2SDnjd9xthw&platform_id=40513",
-      "product_page": "product-gpb-keymoment.html",
-      "features": []
-    }
-  ]
+    "offers": [
+        {
+            "id": "vtb-debit-mir",
+            "status": "active",
+            "category": "debit-cards",
+            "title": "Дебетовая карта МИР",
+            "bank_name": "ВТБ",
+            "url": "https://u-cpa.ru/offer/rs/2kktqbn0vhg02/38ynycdkfpvoc/?partner=215481&erid=Kra23hiMc&platform_id=40513",
+            "product_page": "product-vtb-debit-card.html",
+            "features": [],
+            "specs": {
+                "Кэшбэк/Ставка": "До 3 000 ₽/мескэшбэк",
+                "Лимит/Сумма": "До 50%у партнёров, До 14,2%на ВТБ-Счёт",
+                "Обслуживание": "0 ₽обслуживание"
+            }
+        },
+        {
+            "id": "psb-debit",
+            "status": "active",
+            "category": "debit-cards",
+            "title": "ДК «Твой кэшбэк» МИР",
+            "bank_name": "Промсвязьбанк",
+            "url": "https://trk.ppdu.ru/click?uid=271515&oid=1353&erid=2SDnjehD1C8",
+            "product_page": "product-psb-debit-card.html",
+            "features": [],
+            "specs": {
+                "Другие условия": "10%маркетплейсы и супермаркеты",
+                "Лимит/Сумма": "До 5%в 3 категориях из 20",
+                "Обслуживание": "0 ₽обслуживание навсегда",
+                "Кэшбэк/Ставка": "До 3000 ₽/мескэшбэк"
+            }
+        },
+        {
+            "id": "ubrr-debit",
+            "status": "active",
+            "category": "debit-cards",
+            "title": "ДК «Моя жизнь» МИР",
+            "bank_name": "УБРиР",
+            "url": "https://u-cpa.ru/offer/rs/1867bp9622pll/24fa4yrmk2mdi/?partner=215481&erid=2SDnjd7A3GN&platform_id=40513",
+            "product_page": "product-ubrr-debit-card.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 6%в 4 категориях, До 3000 ₽/мес(до 5000 ₽ с подпиской)",
+                "Кэшбэк/Ставка": "Кэшбэк на ЖКУ",
+                "Обслуживание": "0 ₽обслуживание"
+            }
+        },
+        {
+            "id": "otp-debit",
+            "status": "active",
+            "category": "debit-cards",
+            "title": "Дебетовая ОТП Карта",
+            "bank_name": "ОТП Банк",
+            "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=6626&p=11339&erid=2W5zFFwAUp9",
+            "product_page": "product-otp-debit-card.html",
+            "features": [],
+            "specs": {
+                "Другие условия": "1000 ₽за оформление",
+                "Кэшбэк/Ставка": "До 10% кэшбэкв топ-категориях, До 3000 ₽/мескэшбэк",
+                "Обслуживание": "0 ₽обслуживание и доставка"
+            }
+        },
+        {
+            "id": "vtb-credit",
+            "status": "active",
+            "category": "credit-cards",
+            "title": "Кредитная карта",
+            "bank_name": "Банк ВТБ",
+            "url": "https://u-cpa.ru/offer/rs/2y3t5vlo0y7ze/3n91cojklf9oe/?partner=215481&erid=2SDnjeyZW6n&platform_id=40513",
+            "product_page": "product-vtb-credit-card.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 1 000 000 ₽лимит",
+                "Срок": "200 днейпервый льготный период",
+                "Кэшбэк/Ставка": "Кэшбэк до 25%рублями",
+                "Обслуживание": "0 ₽обслуживание"
+            }
+        },
+        {
+            "id": "yandex-super-split",
+            "status": "active",
+            "category": "credit-cards",
+            "title": "Кредитная карта Супер Сплит",
+            "bank_name": "Яндекс Банк",
+            "url": "https://trk.ppdu.ru/click?uid=271515&oid=2684&erid=2SDnjdJuo9L",
+            "product_page": "product-yandex-super-split.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 1 000 000 ₽лимит, Рассрочкаот 2 до 24 мес",
+                "Обслуживание": "0 ₽обслуживание",
+                "Срок": "Первый платёжчерез месяц"
+            }
+        },
+        {
+            "id": "otp-credit",
+            "status": "active",
+            "category": "credit-cards",
+            "title": "Кредитная карта 120 дней без %",
+            "bank_name": "ОТП Банк",
+            "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=7375&p=11339&erid=2W5zFFz8TNq",
+            "product_page": "product-otp-credit-card.html",
+            "features": [],
+            "specs": {
+                "Кэшбэк/Ставка": "120 днейбез процентов, 10% кэшбэкв 5 категориях, 0 ₽выпуск и доставка",
+                "Лимит/Сумма": "Рассрочка до 24 месв магазинах"
+            }
+        },
+        {
+            "id": "tbank-credit",
+            "status": "active",
+            "category": "credit-cards",
+            "title": "Кредитная карта Платинум",
+            "bank_name": "Т-Банк",
+            "url": "https://u-cpa.ru/offer/rs/3mfdk3hwwx3iu/3q8s9nqp1qx31/?partner=215481&erid=2SDnjcK72Dz&platform_id=40513",
+            "product_page": "product-tbank-credit-card.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 1 000 000 ₽лимит",
+                "Кэшбэк/Ставка": "До 55 днейбез процентов, Доставка курьером",
+                "Срок": "120 днейпри переводе баланса"
+            }
+        },
+        {
+            "id": "zenit-credit",
+            "status": "active",
+            "category": "credit-cards",
+            "title": "Кредитная карта «120 + 120»",
+            "bank_name": "Банк ЗЕНИТ",
+            "url": "https://u-cpa.ru/offer/rs/z1ufkv46li5l/3ml4ysk2e5otz/?partner=215481&erid=2SDnjdkQATJ&platform_id=40513",
+            "product_page": "product-zenit-credit-card.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 2 000 000 ₽лимит",
+                "Срок": "120 днейна покупки, 120 днейна снятие и переводы",
+                "Кэшбэк/Ставка": "Кэшбэк до 35%у партнёров"
+            }
+        },
+        {
+            "id": "uralsib-credit",
+            "status": "active",
+            "category": "credit-cards",
+            "title": "Кредитная карта",
+            "bank_name": "Банк Уралсиб",
+            "url": "https://trk.ppdu.ru/click?uid=271515&oid=1121&erid=2SDnjbpvGx2",
+            "product_page": "product-uralsib-credit-card.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 1 000 000 ₽лимит",
+                "Кэшбэк/Ставка": "До 120 днейбез процентов, Кэшбэк до 30%",
+                "Обслуживание": "0 ₽обслуживание навсегда"
+            }
+        },
+        {
+            "id": "urban-card",
+            "status": "active",
+            "category": "credit-cards",
+            "title": "URBAN CARD",
+            "bank_name": "Кредит Европа Банк",
+            "url": "https://trk.ppdu.ru/click?uid=271515&oid=1489&erid=2SDnjdLFXE2",
+            "product_page": "product-urban-card.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 600 000 ₽лимит",
+                "Кэшбэк/Ставка": "10% кэшбэкна транспорт",
+                "Обслуживание": "0 ₽обслуживание",
+                "Другие условия": "Рассрочка 0%в магазинах"
+            }
+        },
+        {
+            "id": "maxcredit-loan",
+            "status": "active",
+            "category": "loans",
+            "title": "MAX.CREDIT",
+            "bank_name": "МФО «Макс.Кредит»",
+            "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=5316&p=11339&erid=2W5zFK38Z1B",
+            "product_page": "product-maxcredit-loan.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "От 3 000 до 30 000 ₽, До 30 дней",
+                "Другие условия": "0,8% в день"
+            }
+        },
+        {
+            "id": "alfa-dengi",
+            "status": "active",
+            "category": "loans",
+            "title": "Альфа Деньги",
+            "bank_name": "МФО «А Деньги»",
+            "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=6362&p=11339&erid=2W5zFHq5MGm",
+            "product_page": "product-alfa-dengi-limit.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 50 000 ₽лимит, До 30 днейс продлением",
+                "Другие условия": "8 ₽/деньза каждую 1 000 ₽"
+            }
+        },
+        {
+            "id": "smartcash-loan",
+            "status": "active",
+            "category": "loans",
+            "title": "Умные Наличные",
+            "bank_name": "МФО «Умные Наличные»",
+            "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=5562&p=11339&erid=2W5zFJaGS32",
+            "product_page": "product-smartcash-loan.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "От 3 000 до 30 000 ₽, От 5 до 30 дней",
+                "Другие условия": "0,8% в день"
+            }
+        },
+        {
+            "id": "bistrodengi-loan",
+            "status": "active",
+            "category": "loans",
+            "title": "Быстроденьги",
+            "bank_name": "МФК «Быстроденьги»",
+            "url": "https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=4464&p=11339&erid=2W5zFGAk8BT",
+            "product_page": "product-bistrodengi-loan.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "От 3 000 до 100 000 ₽, До 180 дней",
+                "Кэшбэк/Ставка": "Ставкаот 0,8% в день"
+            }
+        },
+        {
+            "id": "moneyman-loan",
+            "status": "active",
+            "category": "loans",
+            "title": "MoneyMan",
+            "bank_name": "МФК «Мани Мен»",
+            "url": "https://go.leadgid.ru/aff_c/?aff_id=122894&offer_id=5024&p=11339&erid=LjN8KHDvg",
+            "product_page": "product-moneyman-loan.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 80 000 ₽сумма, До 18 недель",
+                "Другие условия": "Нужен только паспорт"
+            }
+        },
+        {
+            "id": "yandex-save",
+            "status": "active",
+            "category": "deposits",
+            "title": "Накопительный счёт Сейв",
+            "bank_name": "Яндекс Банк",
+            "url": "https://trk.ppdu.ru/click?uid=271515&oid=2685&erid=2SDnjck9Tog",
+            "product_page": "product-yandex-save.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 15%годовых, От 0,01 ₽минимальная сумма",
+                "Другие условия": "Ежедневноеначисление, Без ограниченийна снятие"
+            }
+        },
+        {
+            "id": "gpb-deposit",
+            "status": "active",
+            "category": "deposits",
+            "title": "Накопительный счёт «Доходный»",
+            "bank_name": "Газпромбанк",
+            "url": "https://u-cpa.ru/offer/rs/3v3xnhlnk8f49/25sul61262zaw/?partner=215481&erid=2SDnjduAaZ1&platform_id=40513",
+            "product_page": "product-gpb-deposit.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 14%годовых",
+                "Другие условия": "Без ограниченийна снятие и пополнение",
+                "Срок": "Без ограниченийпо сумме и сроку, Приветственная надбавкав первые 2 месяца"
+            }
+        },
+        {
+            "id": "gpb-newmoney",
+            "status": "active",
+            "category": "deposits",
+            "title": "Вклад «Новые деньги»",
+            "bank_name": "Газпромбанк",
+            "url": "https://u-cpa.ru/offer/rs/117pd3xvgx9da/1b3xlltwjlt5/?partner=215481&erid=2SDnjd8UuRb&platform_id=40513",
+            "product_page": "product-gpb-newmoney.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 13,6%годовых, Срок от 61 до 1095 дней",
+                "Другие условия": "Надбавка 3%за «новые деньги», От 15 000 ₽онлайн"
+            }
+        },
+        {
+            "id": "gpb-keymoment",
+            "status": "active",
+            "category": "deposits",
+            "title": "Вклад «Ключевой момент»",
+            "bank_name": "Газпромбанк",
+            "url": "https://u-cpa.ru/offer/rs/34abfh8bmkvcj/1d7eoiz16u2jc/?partner=215481&erid=2SDnjd9xthw&platform_id=40513",
+            "product_page": "product-gpb-keymoment.html",
+            "features": [],
+            "specs": {
+                "Лимит/Сумма": "До 16%годовых, От 100 000 ₽минимальная сумма, Срок от 120 до 1095 дней",
+                "Кэшбэк/Ставка": "Ставка зависитот ключевой ставки ЦБ"
+            }
+        }
+    ]
 }
