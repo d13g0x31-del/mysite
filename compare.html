@@ -36,73 +36,81 @@
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            const container = document.getElementById('compare-container');
-            const compareList = JSON.parse(localStorage.getItem('compareList')) || [];
+    document.addEventListener('DOMContentLoaded', async () => {
+        const container = document.getElementById('compare-container');
+        const compareList = JSON.parse(localStorage.getItem('compareList')) || [];
 
-            // Если список пуст
-            if (compareList.length === 0) {
-                container.innerHTML = '<p>Вы пока не выбрали офферы для сравнения.</p><br><a href="catalog.html" class="btn btn--primary">Перейти в каталог</a>';
+        if (compareList.length === 0) {
+            container.innerHTML = '<p>Вы пока не выбрали офферы для сравнения.</p><br><a href="catalog.html" class="btn btn--primary">Перейти в каталог</a>';
+            return;
+        }
+
+        try {
+            const response = await fetch('offers.json');
+            const data = await response.json();
+            
+            let allOffers = data.offers || data;
+            let offersArray = Array.isArray(allOffers) ? allOffers : Object.values(allOffers);
+            
+            const selectedOffers = offersArray.filter(offer => {
+                const offerId = offer.id || offer.offer_id;
+                return compareList.includes(offerId);
+            });
+
+            if (selectedOffers.length === 0) {
+                container.innerHTML = '<p>Ошибка: выбранные офферы не найдены в базе.</p><br><a href="catalog.html" class="btn btn--primary">Вернуться в каталог</a>';
                 return;
             }
 
-            try {
-                const response = await fetch('offers.json');
-                const data = await response.json();
-                
-                // Проверяем структуру: если это словарь с ключом "offers", берем оттуда, иначе берем весь массив
-                let allOffers = data.offers || data;
-                // Превращаем в массив, если это словарь (на случай разных версий базы)
-                let offersArray = Array.isArray(allOffers) ? allOffers : Object.values(allOffers);
-                
-                // Фильтруем те офферы, которые пользователь выбрал (по ID)
-                const selectedOffers = offersArray.filter(offer => {
-                    const offerId = offer.id || offer.offer_id;
-                    return compareList.includes(offerId);
-                });
-
-                if (selectedOffers.length === 0) {
-                    container.innerHTML = '<p>Ошибка: выбранные офферы не найдены в базе. Возможно, база обновилась.</p><br><a href="catalog.html" class="btn btn--primary">Вернуться в каталог</a>';
-                    return;
+            // Собираем все уникальные названия характеристик из выбранных офферов
+            const allSpecs = new Set();
+            selectedOffers.forEach(offer => {
+                if (offer.specs) {
+                    Object.keys(offer.specs).forEach(key => allSpecs.add(key));
                 }
+            });
+            const specKeys = Array.from(allSpecs);
 
-                // Строим таблицу
-                let tableHTML = '<table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">';
-                tableHTML += '<tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0;"><th style="padding: 20px; text-align: left; min-width: 150px;">Характеристика</th>';
-                
+            // Строим таблицу
+            let tableHTML = '<table style="width: 100%; border-collapse: collapse; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">';
+            
+            // Заголовки (Названия офферов)
+            tableHTML += '<tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0;"><th style="padding: 20px; text-align: left; min-width: 150px;">Характеристика</th>';
+            selectedOffers.forEach(offer => {
+                tableHTML += `<th style="padding: 20px; text-align: center; min-width: 200px; font-size: 18px;">${offer.title || 'Без названия'}</th>`;
+            });
+            tableHTML += '</tr>';
+
+            // Строка банка
+            tableHTML += '<tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 15px 20px; font-weight: bold; color: #64748b;">Банк / МФО</td>';
+            selectedOffers.forEach(offer => tableHTML += `<td style="padding: 15px 20px; text-align: center;">${offer.bank_name || '—'}</td>`);
+            tableHTML += '</tr>';
+
+            // Строки с характеристиками
+            specKeys.forEach(specName => {
+                tableHTML += `<tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 15px 20px; font-weight: bold; color: #64748b;">${specName}</td>`;
                 selectedOffers.forEach(offer => {
-                    tableHTML += `<th style="padding: 20px; text-align: center; min-width: 200px; font-size: 18px;">${offer.title || 'Без названия'}</th>`;
+                    const val = offer.specs && offer.specs[specName] ? offer.specs[specName] : '—';
+                    tableHTML += `<td style="padding: 15px 20px; text-align: center; font-weight: 500;">${val}</td>`;
                 });
                 tableHTML += '</tr>';
+            });
 
-                // Строка банка
-                tableHTML += '<tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 15px 20px; font-weight: bold; color: #64748b;">Банк / МФО</td>';
-                selectedOffers.forEach(offer => tableHTML += `<td style="padding: 15px 20px; text-align: center;">${offer.bank_name || '—'}</td>`);
-                tableHTML += '</tr>';
+            // Кнопка оформить
+            tableHTML += '<tr><td style="padding: 20px;"></td>';
+            selectedOffers.forEach(offer => {
+                tableHTML += `<td style="padding: 20px; text-align: center;"><a href="${offer.url || '#'}" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card" style="display: inline-block; width: 100%;">Оформить</a></td>`;
+            });
+            tableHTML += '</tr>';
 
-                // Строка особенностей
-                tableHTML += '<tr style="border-bottom: 1px solid #e2e8f0;"><td style="padding: 15px 20px; font-weight: bold; color: #64748b;">Особенности</td>';
-                selectedOffers.forEach(offer => {
-                    let feats = (offer.features || []).map(f => `<li style="margin-bottom: 5px;">${f}</li>`).join('');
-                    tableHTML += `<td style="padding: 15px 20px; text-align: left; vertical-align: top;"><ul style="padding-left: 15px; margin: 0; font-size: 14px; color: #475569;">${feats || '—'}</ul></td>`;
-                });
-                tableHTML += '</tr>';
+            tableHTML += '</table>';
+            container.innerHTML = tableHTML;
 
-                // Строка с кнопками
-                tableHTML += '<tr><td style="padding: 20px;"></td>';
-                selectedOffers.forEach(offer => {
-                    tableHTML += `<td style="padding: 20px; text-align: center;"><a href="${offer.url || '#'}" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card" style="display: inline-block; width: 100%;">Оформить</a></td>`;
-                });
-                tableHTML += '</tr>';
-
-                tableHTML += '</table>';
-                container.innerHTML = tableHTML;
-
-            } catch (error) {
-                console.error(error);
-                container.innerHTML = '<p>Ошибка загрузки данных. Пожалуйста, проверьте соединение и обновите страницу.</p>';
-            }
-        });
-    </script>
+        } catch (error) {
+            console.error(error);
+            container.innerHTML = '<p>Ошибка загрузки данных. Пожалуйста, обновите страницу.</p>';
+        }
+    });
+</script>
 </body>
 </html>
