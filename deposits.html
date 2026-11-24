@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head><!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -11,206 +12,192 @@
 
     ym(114380430, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/114380430" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img alt="" src="https://mc.yandex.ru/watch/114380430" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="shortcut icon" href="/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <meta name="theme-color" content="#2563eb">
-    <title>Вклады и накопительные счета — выгодные ставки | BankiPlace</title>
-    <meta name="description" content="Лучшие вклады и накопительные счета от проверенных банков. Сравнивайте условия и открывайте онлайн.">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon/site.webmanifest" rel="manifest"/>
+<meta content="#2563eb" name="theme-color"/>
+<title>Вклады и накопительные счета — выгодные ставки | BankiPlace</title>
+<meta content="Лучшие вклады и накопительные счета от проверенных банков. Сравнивайте условия и открывайте онлайн." name="description"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-
-    <header class="header">
-        <div class="container header__inner">
-            <a href="index.html" class="logo">Banki<span>Place</span></a>
-            <nav class="nav">
-                <a href="debit-cards.html">Дебетовые карты</a>
-                <a href="credit-cards.html">Кредитные карты</a>
-                <a href="loans.html">Займы</a>
-                <a href="deposits.html" class="active">Вклады</a>
-                <a href="blog.html">Блог</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Вклады и накопительные счета</h1>
-            <p>Выгодные ставки от проверенных банков. Сравнивайте условия и открывайте онлайн.</p>
-        </div>
-    </section>
-
-    <section class="calculators" id="calculators">
-        <div class="container">
-            <h2>Рассчитайте доходность вклада</h2>
-            <div class="calc-grid" style="max-width: 560px;">
-                <div class="calc-card">
-                    <h3>📈 Калькулятор вклада</h3>
-                    <div class="calc-form">
-                        <label>Сумма вклада (₽)</label>
-                        <input type="number" id="depositAmount" placeholder="100000" min="0">
-                        <label>Ставка (% годовых)</label>
-                        <input type="number" id="depositRate" placeholder="18" min="0" step="0.1">
-                        <label>Срок (месяцев)</label>
-                        <input type="number" id="depositTerm" placeholder="12" min="1" max="120">
-                        <button class="btn btn--card" onclick="calcDeposit()">Рассчитать</button>
-                    </div>
-                    <div class="calc-result" id="depositResult"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="catalog" id="catalog">
-        <div class="container">
-            <div class="grid">
-
-                <div class="card" data-category="deposit" data-offer-id="yandex-save">
-                    <div class="card__bank-logo logo--yandex">Яндекс</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Накопительный счёт Сейв</h3>
-                            <p class="card__bank">Яндекс Банк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 15%</b> годовых</li>
-                            <li><b>Ежедневное</b> начисление</li>
-                            <li><b>Без ограничений</b> на снятие</li>
-                            <li><b>От 0,01 ₽</b> минимальная сумма</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-yandex-save.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://trk.ppdu.ru/click?uid=271515&oid=2685&erid=2SDnjck9Tog" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Открыть счёт</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="deposit" data-offer-id="gpb-deposit">
-                    <div class="card__bank-logo logo--gpb">ГПБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Накопительный счёт «Доходный»</h3>
-                            <p class="card__bank">Газпромбанк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 14%</b> годовых</li>
-                            <li><b>Без ограничений</b> на снятие и пополнение</li>
-                            <li><b>Без ограничений</b> по сумме и сроку</li>
-                            <li><b>Приветственная надбавка</b> в первые 2 месяца</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-gpb-deposit.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/3v3xnhlnk8f49/25sul61262zaw/?partner=215481&erid=2SDnjduAaZ1&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Открыть счёт</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="deposit" data-offer-id="gpb-newmoney">
-                    <div class="card__bank-logo logo--gpb">ГПБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Вклад «Новые деньги»</h3>
-                            <p class="card__bank">Газпромбанк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 13,6%</b> годовых</li>
-                            <li><b>Надбавка 3%</b> за «новые деньги»</li>
-                            <li><b>От 15 000 ₽</b> онлайн</li>
-                            <li><b>Срок от 61 до 1095 дней</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-gpb-newmoney.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/117pd3xvgx9da/1b3xlltwjlt5/?partner=215481&erid=2SDnjd8UuRb&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Открыть вклад</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="deposit" data-offer-id="gpb-keymoment">
-                    <div class="card__bank-logo logo--gpb">ГПБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Вклад «Ключевой момент»</h3>
-                            <p class="card__bank">Газпромбанк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 16%</b> годовых</li>
-                            <li><b>Ставка зависит</b> от ключевой ставки ЦБ</li>
-                            <li><b>От 100 000 ₽</b> минимальная сумма</li>
-                            <li><b>Срок от 120 до 1095 дней</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-gpb-keymoment.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/34abfh8bmkvcj/1d7eoiz16u2jc/?partner=215481&erid=2SDnjd9xthw&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Открыть вклад</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="faq">
-        <div class="container">
-            <h2>Частые вопросы</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Чем вклад отличается от накопительного счёта?</h3>
-                    <p>Вклад — на фиксированный срок с повышенной ставкой. Накопительный счёт — без срока, с возможностью снятия.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Застрахованы ли вклады?</h3>
-                    <p>Да, все банки-участники АСВ страхуют вклады до 1,4 млн ₽.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Можно ли снять деньги досрочно?</h3>
-                    <p>Зависит от условий вклада. У накопительных счетов — без ограничений. У срочных вкладов — обычно с потерей процентов.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__col">
-                    <h4>BankiPlace</h4>
-                    <p>Маркетплейс финансовых продуктов.</p>
-                </div>
-                <div class="footer__col">
-                    <h4>Продукты</h4>
-                    <a href="debit-cards.html">Дебетовые карты</a>
-                    <a href="credit-cards.html">Кредитные карты</a>
-                    <a href="loans.html">Займы</a>
-                    <a href="deposits.html">Вклады</a>
-                </div>
-                <div class="footer__col">
-                    <h4>Информация</h4>
-                    <a href="blog.html">Блог</a>
-                    <a href="privacy.html">Политика конфиденциальности</a>
-                    <a href="terms.html">Пользовательское соглашение</a>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>© 2026 BankiPlace. Все права защищены. 18+</p>
-                <div class="disclaimer">
-                    <p>BankiPlace не является банком, МФО, брокером или инвестиционным советником. Сайт носит исключительно информационный характер. Все продукты предоставляются соответствующими организациями. Перед оформлением проверяйте условия на официальном сайте партнёра.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
-
-    <script src="js/script.js"></script>
-    <script src="js/offers-status.js"></script>
+<header class="header">
+<div class="container header__inner">
+<a class="logo" href="index.html">Banki<span>Place</span></a>
+<nav class="nav">
+<a href="debit-cards.html">Дебетовые карты</a>
+<a href="credit-cards.html">Кредитные карты</a>
+<a href="loans.html">Займы</a>
+<a class="active" href="deposits.html">Вклады</a>
+<a href="blog.html">Блог</a>
+</nav>
+</div>
+</header>
+<section class="hero">
+<div class="container">
+<h1>Вклады и накопительные счета</h1>
+<p>Выгодные ставки от проверенных банков. Сравнивайте условия и открывайте онлайн.</p>
+</div>
+</section>
+<section class="calculators" id="calculators">
+<div class="container">
+<h2>Рассчитайте доходность вклада</h2>
+<div class="calc-grid" style="max-width: 560px;">
+<div class="calc-card">
+<h3>📈 Калькулятор вклада</h3>
+<div class="calc-form">
+<label>Сумма вклада (₽)</label>
+<input id="depositAmount" min="0" placeholder="100000" type="number"/>
+<label>Ставка (% годовых)</label>
+<input id="depositRate" min="0" placeholder="18" step="0.1" type="number"/>
+<label>Срок (месяцев)</label>
+<input id="depositTerm" max="120" min="1" placeholder="12" type="number"/>
+<button class="btn btn--card" onclick="calcDeposit()">Рассчитать</button>
+</div>
+<div class="calc-result" id="depositResult"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="catalog" id="catalog">
+<div class="container">
+<div class="grid">
+<div class="card" data-category="deposit" data-offer-id="yandex-save">
+<img alt="Яндекс" class="card__logo-img" src="img/logos/bank.yandex.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Накопительный счёт Сейв</h3>
+<p class="card__bank">Яндекс Банк</p>
+</div>
+<ul class="card__features">
+<li><b>До 15%</b> годовых</li>
+<li><b>Ежедневное</b> начисление</li>
+<li><b>Без ограничений</b> на снятие</li>
+<li><b>От 0,01 ₽</b> минимальная сумма</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-yandex-save.html">Подробнее</a>
+<a class="btn btn--card" href="https://trk.ppdu.ru/click?uid=271515&amp;oid=2685&amp;erid=2SDnjck9Tog" rel="nofollow sponsored noopener" target="_blank">Открыть счёт</a>
+</div>
+</div>
+<div class="card" data-category="deposit" data-offer-id="gpb-deposit">
+<img alt="ГПБ" class="card__logo-img" src="img/logos/gazprombank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Накопительный счёт «Доходный»</h3>
+<p class="card__bank">Газпромбанк</p>
+</div>
+<ul class="card__features">
+<li><b>До 14%</b> годовых</li>
+<li><b>Без ограничений</b> на снятие и пополнение</li>
+<li><b>Без ограничений</b> по сумме и сроку</li>
+<li><b>Приветственная надбавка</b> в первые 2 месяца</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-gpb-deposit.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/3v3xnhlnk8f49/25sul61262zaw/?partner=215481&amp;erid=2SDnjduAaZ1&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Открыть счёт</a>
+</div>
+</div>
+<div class="card" data-category="deposit" data-offer-id="gpb-newmoney">
+<img alt="ГПБ" class="card__logo-img" src="img/logos/gazprombank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Вклад «Новые деньги»</h3>
+<p class="card__bank">Газпромбанк</p>
+</div>
+<ul class="card__features">
+<li><b>До 13,6%</b> годовых</li>
+<li><b>Надбавка 3%</b> за «новые деньги»</li>
+<li><b>От 15 000 ₽</b> онлайн</li>
+<li><b>Срок от 61 до 1095 дней</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-gpb-newmoney.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/117pd3xvgx9da/1b3xlltwjlt5/?partner=215481&amp;erid=2SDnjd8UuRb&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Открыть вклад</a>
+</div>
+</div>
+<div class="card" data-category="deposit" data-offer-id="gpb-keymoment">
+<img alt="ГПБ" class="card__logo-img" src="img/logos/gazprombank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Вклад «Ключевой момент»</h3>
+<p class="card__bank">Газпромбанк</p>
+</div>
+<ul class="card__features">
+<li><b>До 16%</b> годовых</li>
+<li><b>Ставка зависит</b> от ключевой ставки ЦБ</li>
+<li><b>От 100 000 ₽</b> минимальная сумма</li>
+<li><b>Срок от 120 до 1095 дней</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-gpb-keymoment.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/34abfh8bmkvcj/1d7eoiz16u2jc/?partner=215481&amp;erid=2SDnjd9xthw&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Открыть вклад</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="faq">
+<div class="container">
+<h2>Частые вопросы</h2>
+<div class="faq-grid">
+<div class="faq-item">
+<h3>Чем вклад отличается от накопительного счёта?</h3>
+<p>Вклад — на фиксированный срок с повышенной ставкой. Накопительный счёт — без срока, с возможностью снятия.</p>
+</div>
+<div class="faq-item">
+<h3>Застрахованы ли вклады?</h3>
+<p>Да, все банки-участники АСВ страхуют вклады до 1,4 млн ₽.</p>
+</div>
+<div class="faq-item">
+<h3>Можно ли снять деньги досрочно?</h3>
+<p>Зависит от условий вклада. У накопительных счетов — без ограничений. У срочных вкладов — обычно с потерей процентов.</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footer__inner">
+<div class="footer__col">
+<h4>BankiPlace</h4>
+<p>Маркетплейс финансовых продуктов.</p>
+</div>
+<div class="footer__col">
+<h4>Продукты</h4>
+<a href="debit-cards.html">Дебетовые карты</a>
+<a href="credit-cards.html">Кредитные карты</a>
+<a href="loans.html">Займы</a>
+<a href="deposits.html">Вклады</a>
+</div>
+<div class="footer__col">
+<h4>Информация</h4>
+<a href="blog.html">Блог</a>
+<a href="privacy.html">Политика конфиденциальности</a>
+<a href="terms.html">Пользовательское соглашение</a>
+</div>
+</div>
+<div class="footer__bottom">
+<p>© 2026 BankiPlace. Все права защищены. 18+</p>
+<div class="disclaimer">
+<p>BankiPlace не является банком, МФО, брокером или инвестиционным советником. Сайт носит исключительно информационный характер. Все продукты предоставляются соответствующими организациями. Перед оформлением проверяйте условия на официальном сайте партнёра.</p>
+</div>
+</div>
+</div>
+</footer>
+<button aria-label="Наверх" class="scroll-top" id="scrollTop">↑</button>
+<script src="js/script.js"></script>
+<script src="js/offers-status.js"></script>
 </body>
 </html>

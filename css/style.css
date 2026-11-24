@@ -874,3 +874,14 @@ section {
     padding: 10px;
     font-size: 14px;
 }
+
+.card__logo-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #fff;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 16px;
+}

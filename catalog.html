@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
 <!-- Yandex.Metrika counter -->
@@ -12,499 +13,469 @@
 
     ym(114380430, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/114380430" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img alt="" src="https://mc.yandex.ru/watch/114380430" style="position:absolute; left:-9999px;"/></div></noscript>
 <!-- /Yandex.Metrika counter -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="shortcut icon" href="/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <meta name="theme-color" content="#2563eb">
-    <title>Каталог финансовых продуктов — BankiPlace</title>
-    <meta name="description" content="Все финансовые продукты в одном каталоге: дебетовые и кредитные карты, займы, вклады. Сравнивайте и оформляйте онлайн.">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon/favicon.ico" rel="shortcut icon"/>
+<link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon/site.webmanifest" rel="manifest"/>
+<meta content="#2563eb" name="theme-color"/>
+<title>Каталог финансовых продуктов — BankiPlace</title>
+<meta content="Все финансовые продукты в одном каталоге: дебетовые и кредитные карты, займы, вклады. Сравнивайте и оформляйте онлайн." name="description"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-
-    <header class="header">
-        <div class="container header__inner">
-            <a href="index.html" class="logo">Banki<span>Place</span></a>
-            <nav class="nav">
-                <a href="debit-cards.html">Дебетовые карты</a>
-                <a href="credit-cards.html">Кредитные карты</a>
-                <a href="loans.html">Займы</a>
-                <a href="deposits.html">Вклады</a>
-                <a href="blog.html">Блог</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Каталог продуктов</h1>
-            <p>Все финансовые предложения в одном месте. Выбирайте и оформляйте онлайн.</p>
-        </div>
-    </section>
-
-    <section class="catalog">
-        <div class="container">
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">Все продукты</button>
-                <button class="filter-btn" data-filter="cards">Дебетовые карты</button>
-                <button class="filter-btn" data-filter="credit">Кредитные карты</button>
-                <button class="filter-btn" data-filter="loans">Займы</button>
-                <button class="filter-btn" data-filter="deposit">Вклады</button>
-            </div>
-
-            <div class="catalog-controls" style="margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap;">
-    <input type="text" id="searchInput" placeholder="Поиск по названию..." style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; flex-grow: 1;">
-    <select id="sortSelect" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-        <option value="default">По умолчанию</option>
-        <option value="name-asc">Название (А-Я)</option>
-        <option value="name-desc">Название (Я-А)</option>
-    </select>
+<header class="header">
+<div class="container header__inner">
+<a class="logo" href="index.html">Banki<span>Place</span></a>
+<nav class="nav">
+<a href="debit-cards.html">Дебетовые карты</a>
+<a href="credit-cards.html">Кредитные карты</a>
+<a href="loans.html">Займы</a>
+<a href="deposits.html">Вклады</a>
+<a href="blog.html">Блог</a>
+</nav>
 </div>
-
-            <div class="grid">
-                <div class="card" data-category="cards" data-offer-id="vtb-debit-mir">
-                    <div class="card__bank-logo logo--vtb">ВТБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Дебетовая карта МИР</h3>
-                            <p class="card__bank">Банк ВТБ</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 3 000 ₽/мес</b> кэшбэк</li>
-                            <li><b>До 50%</b> у партнёров</li>
-                            <li><b>0 ₽</b> обслуживание</li>
-                            <li><b>До 14,2%</b> на ВТБ-Счёт</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-vtb-debit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/2kktqbn0vhg02/38ynycdkfpvoc/?partner=215481&erid=Kra23hiMc&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="cards" data-offer-id="psb-debit">
-                    <div class="card__bank-logo logo--psb">ПСБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">ДК «Твой кэшбэк» МИР</h3>
-                            <p class="card__bank">Промсвязьбанк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>10%</b> маркетплейсы и супермаркеты</li>
-                            <li><b>До 5%</b> в 3 категориях из 20</li>
-                            <li><b>0 ₽</b> обслуживание навсегда</li>
-                            <li><b>До 3000 ₽/мес</b> кэшбэк</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-psb-debit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://trk.ppdu.ru/click?uid=271515&oid=1353&erid=2SDnjeSSA6F&siteId=6619" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="cards" data-offer-id="ubrr-debit">
-                    <div class="card__bank-logo logo--ubrr">УБРиР</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">ДК «Моя жизнь» МИР</h3>
-                            <p class="card__bank">УБРиР</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 6%</b> в 4 категориях</li>
-                            <li><b>Кэшбэк на ЖКУ</b></li>
-                            <li><b>До 3000 ₽/мес</b> (до 5000 ₽ с подпиской)</li>
-                            <li><b>0 ₽</b> обслуживание</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-ubrr-debit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/1867bp9622pll/24fa4yrmk2mdi/?partner=215481&erid=2SDnjd7A3GN&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="cards" data-offer-id="otp-debit">
-                    <div class="card__bank-logo logo--otp">ОТП</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Дебетовая ОТП Карта</h3>
-                            <p class="card__bank">ОТП Банк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>1000 ₽</b> за оформление</li>
-                            <li><b>До 10% кэшбэк</b> в топ-категориях</li>
-                            <li><b>До 3000 ₽/мес</b> кэшбэк</li>
-                            <li><b>0 ₽</b> обслуживание и доставка</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-otp-debit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=6626&p=11339&erid=2W5zFFwAUp9" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <!-- КРЕДИТНЫЕ КАРТЫ -->
-                <div class="card" data-category="credit" data-offer-id="vtb-credit">
-                    <div class="card__bank-logo logo--vtb">ВТБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Кредитная карта</h3>
-                            <p class="card__bank">Банк ВТБ</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 1 000 000 ₽</b> лимит</li>
-                            <li><b>200 дней</b> первый льготный период</li>
-                            <li><b>Кэшбэк до 25%</b> рублями</li>
-                            <li><b>0 ₽</b> обслуживание</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-vtb-credit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/2y3t5vlo0y7ze/3n91cojklf9oe/?partner=215481&erid=2SDnjeyZW6n&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="credit" data-offer-id="yandex-super-split">
-                    <div class="card__bank-logo logo--yandex">Яндекс</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Кредитная карта Супер Сплит</h3>
-                            <p class="card__bank">Яндекс Банк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 1 000 000 ₽</b> лимит</li>
-                            <li><b>Рассрочка</b> от 2 до 24 мес</li>
-                            <li><b>0 ₽</b> обслуживание</li>
-                            <li><b>Первый платёж</b> через месяц</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-yandex-super-split.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://trk.ppdu.ru/click?uid=271515&oid=2684&erid=2SDnjdJuo9L" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="credit" data-offer-id="otp-credit">
-                    <div class="card__bank-logo logo--otp">ОТП</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Кредитная карта 120 дней без %</h3>
-                            <p class="card__bank">ОТП Банк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>120 дней</b> без процентов</li>
-                            <li><b>Рассрочка до 24 мес</b> в магазинах</li>
-                            <li><b>10% кэшбэк</b> в 5 категориях</li>
-                            <li><b>0 ₽</b> выпуск и доставка</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-otp-credit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=7375&p=11339&erid=2W5zFFz8TNq" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="credit" data-offer-id="tbank-credit">
-                    <div class="card__bank-logo logo--tbank">Т-Банк</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Кредитная карта Платинум</h3>
-                            <p class="card__bank">Т-Банк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 1 000 000 ₽</b> лимит</li>
-                            <li><b>До 55 дней</b> без процентов</li>
-                            <li><b>120 дней</b> при переводе баланса</li>
-                            <li><b>Доставка курьером</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-tbank-credit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/3mfdk3hwwx3iu/3q8s9nqp1qx31/?partner=215481&erid=2SDnjcK72Dz&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="credit" data-offer-id="zenit-credit">
-                    <div class="card__bank-logo logo--zenit">ЗЕНИТ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Кредитная карта «120 + 120»</h3>
-                            <p class="card__bank">Банк ЗЕНИТ</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 2 000 000 ₽</b> лимит</li>
-                            <li><b>120 дней</b> на покупки</li>
-                            <li><b>120 дней</b> на снятие и переводы</li>
-                            <li><b>Кэшбэк до 35%</b> у партнёров</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-zenit-credit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/z1ufkv46li5l/3ml4ysk2e5otz/?partner=215481&erid=2SDnjdkQATJ&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="credit" data-offer-id="uralsib-credit">
-                    <div class="card__bank-logo logo--uralsib">УРАЛСИБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Кредитная карта</h3>
-                            <p class="card__bank">Банк Уралсиб</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 1 000 000 ₽</b> лимит</li>
-                            <li><b>До 120 дней</b> без процентов</li>
-                            <li><b>Кэшбэк до 30%</b></li>
-                            <li><b>0 ₽</b> обслуживание навсегда</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-uralsib-credit-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://trk.ppdu.ru/click?uid=271515&oid=1121&erid=2SDnjbpvGx2" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="credit" data-offer-id="urban-card">
-                    <div class="card__bank-logo logo--urban">URBAN</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">URBAN CARD</h3>
-                            <p class="card__bank">Кредит Европа Банк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 600 000 ₽</b> лимит</li>
-                            <li><b>10% кэшбэк</b> на транспорт</li>
-                            <li><b>0 ₽</b> обслуживание</li>
-                            <li><b>Рассрочка 0%</b> в магазинах</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-urban-card.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://trk.ppdu.ru/click?uid=271515&oid=1489&erid=2SDnjdLFXE2" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <!-- ЗАЙМЫ -->
-                <div class="card" data-category="loans" data-offer-id="maxcredit-loan">
-                    <div class="card__bank-logo logo--loans">MAX</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">MAX.CREDIT</h3>
-                            <p class="card__bank">МФО «Макс.Кредит»</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>От 3 000 до 30 000 ₽</b></li>
-                            <li><b>0,8% в день</b></li>
-                            <li><b>До 30 дней</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-maxcredit-loan.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=5316&p=11339&erid=2W5zFK38Z1B" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="loans" data-offer-id="alfa-dengi">
-                    <div class="card__bank-logo logo--alfa">А</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Альфа Деньги</h3>
-                            <p class="card__bank">МФО «А Деньги»</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 50 000 ₽</b> лимит</li>
-                            <li><b>8 ₽/день</b> за каждую 1 000 ₽</li>
-                            <li><b>До 30 дней</b> с продлением</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-alfa-dengi-limit.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=6362&p=11339&erid=2W5zFHq5MGm" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="loans" data-offer-id="smartcash-loan">
-                    <div class="card__bank-logo logo--smartcash">УН</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Умные Наличные</h3>
-                            <p class="card__bank">МФО «Умные Наличные»</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>От 3 000 до 30 000 ₽</b></li>
-                            <li><b>0,8% в день</b></li>
-                            <li><b>От 5 до 30 дней</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-smartcash-loan.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=5562&p=11339&erid=2W5zFJaGS32" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="loans" data-offer-id="bistrodengi-loan">
-                    <div class="card__bank-logo logo--bistrodengi">БД</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Быстроденьги</h3>
-                            <p class="card__bank">МФК «Быстроденьги»</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>От 3 000 до 100 000 ₽</b></li>
-                            <li><b>Ставка</b> от 0,8% в день</li>
-                            <li><b>До 180 дней</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-bistrodengi-loan.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://go.leadgid.ru/aff_c?aff_id=122894&offer_id=4464&p=11339&erid=2W5zFGAk8BT" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="loans" data-offer-id="moneyman-loan">
-                    <div class="card__bank-logo logo--moneyman">MM</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">MoneyMan</h3>
-                            <p class="card__bank">МФК «Мани Мен»</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 80 000 ₽</b> сумма</li>
-                            <li><b>До 18 недель</b></li>
-                            <li><b>Нужен только паспорт</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-moneyman-loan.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://go.leadgid.ru/aff_c/?aff_id=122894&offer_id=5024&p=11339&erid=LjN8KHDvg" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Оформить</a>
-                    </div>
-                </div>
-
-                <!-- ВКЛАДЫ -->
-                <div class="card" data-category="deposit" data-offer-id="yandex-save">
-                    <div class="card__bank-logo logo--yandex">Яндекс</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Накопительный счёт Сейв</h3>
-                            <p class="card__bank">Яндекс Банк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 15%</b> годовых</li>
-                            <li><b>Ежедневное</b> начисление</li>
-                            <li><b>Без ограничений</b> на снятие</li>
-                            <li><b>От 0,01 ₽</b> минимальная сумма</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-yandex-save.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://trk.ppdu.ru/click?uid=271515&oid=2685&erid=2SDnjck9Tog" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Открыть счёт</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="deposit" data-offer-id="gpb-deposit">
-                    <div class="card__bank-logo logo--gpb">ГПБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Накопительный счёт «Доходный»</h3>
-                            <p class="card__bank">Газпромбанк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 14%</b> годовых</li>
-                            <li><b>Без ограничений</b> на снятие и пополнение</li>
-                            <li><b>Без ограничений</b> по сумме и сроку</li>
-                            <li><b>Приветственная надбавка</b> в первые 2 месяца</li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-gpb-deposit.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/3v3xnhlnk8f49/25sul61262zaw/?partner=215481&erid=2SDnjduAaZ1&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Открыть счёт</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="deposit" data-offer-id="gpb-newmoney">
-                    <div class="card__bank-logo logo--gpb">ГПБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Вклад «Новые деньги»</h3>
-                            <p class="card__bank">Газпромбанк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 13,6%</b> годовых</li>
-                            <li><b>Надбавка 3%</b> за «новые деньги»</li>
-                            <li><b>От 15 000 ₽</b> онлайн</li>
-                            <li><b>Срок от 61 до 1095 дней</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-gpb-newmoney.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/117pd3xvgx9da/1b3xlltwjlt5/?partner=215481&erid=2SDnjd8UuRb&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Открыть вклад</a>
-                    </div>
-                </div>
-
-                <div class="card" data-category="deposit" data-offer-id="gpb-keymoment">
-                    <div class="card__bank-logo logo--gpb">ГПБ</div>
-                    <div class="card__body">
-                        <div class="card__head">
-                            <h3 class="card__title">Вклад «Ключевой момент»</h3>
-                            <p class="card__bank">Газпромбанк</p>
-                        </div>
-                        <ul class="card__features">
-                            <li><b>До 16%</b> годовых</li>
-                            <li><b>Ставка зависит</b> от ключевой ставки ЦБ</li>
-                            <li><b>От 100 000 ₽</b> минимальная сумма</li>
-                            <li><b>Срок от 120 до 1095 дней</b></li>
-                        </ul>
-                    </div>
-                    <div class="card__actions">
-                        <a href="product-gpb-keymoment.html" class="btn btn--outline">Подробнее</a>
-                        <a href="https://u-cpa.ru/offer/rs/34abfh8bmkvcj/1d7eoiz16u2jc/?partner=215481&erid=2SDnjd9xthw&platform_id=40513" target="_blank" rel="nofollow sponsored noopener" class="btn btn--card">Открыть вклад</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__col">
-                    <h4>BankiPlace</h4>
-                    <p>Маркетплейс финансовых продуктов.</p>
-                </div>
-                <div class="footer__col">
-                    <h4>Продукты</h4>
-                    <a href="debit-cards.html">Дебетовые карты</a>
-                    <a href="credit-cards.html">Кредитные карты</a>
-                    <a href="loans.html">Займы</a>
-                    <a href="deposits.html">Вклады</a>
-                </div>
-                <div class="footer__col">
-                    <h4>Информация</h4>
-                    <a href="blog.html">Блог</a>
-                    <a href="privacy.html">Политика конфиденциальности</a>
-                    <a href="terms.html">Пользовательское соглашение</a>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>© 2026 BankiPlace. Все права защищены. 18+</p>
-                <div class="disclaimer">
-                    <p>BankiPlace не является банком, МФО, брокером или инвестиционным советником. Сайт носит исключительно информационный характер. Все продукты предоставляются соответствующими организациями. Перед оформлением проверяйте условия на официальном сайте партнёра.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
-
-    <script src="js/script.js"></script>
-
-    
+</header>
+<section class="hero">
+<div class="container">
+<h1>Каталог продуктов</h1>
+<p>Все финансовые предложения в одном месте. Выбирайте и оформляйте онлайн.</p>
+</div>
+</section>
+<section class="catalog">
+<div class="container">
+<div class="filters">
+<button class="filter-btn active" data-filter="all">Все продукты</button>
+<button class="filter-btn" data-filter="cards">Дебетовые карты</button>
+<button class="filter-btn" data-filter="credit">Кредитные карты</button>
+<button class="filter-btn" data-filter="loans">Займы</button>
+<button class="filter-btn" data-filter="deposit">Вклады</button>
+</div>
+<div class="catalog-controls" style="margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap;">
+<input id="searchInput" placeholder="Поиск по названию..." style="padding: 10px; border-radius: 8px; border: 1px solid #ccc; flex-grow: 1;" type="text"/>
+<select id="sortSelect" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+<option value="default">По умолчанию</option>
+<option value="name-asc">Название (А-Я)</option>
+<option value="name-desc">Название (Я-А)</option>
+</select>
+</div>
+<div class="grid">
+<div class="card" data-category="cards" data-offer-id="vtb-debit-mir">
+<img alt="ВТБ" class="card__logo-img" src="img/logos/vtb.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Дебетовая карта МИР</h3>
+<p class="card__bank">Банк ВТБ</p>
+</div>
+<ul class="card__features">
+<li><b>До 3 000 ₽/мес</b> кэшбэк</li>
+<li><b>До 50%</b> у партнёров</li>
+<li><b>0 ₽</b> обслуживание</li>
+<li><b>До 14,2%</b> на ВТБ-Счёт</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-vtb-debit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/2kktqbn0vhg02/38ynycdkfpvoc/?partner=215481&amp;erid=Kra23hiMc&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="cards" data-offer-id="psb-debit">
+<img alt="ПСБ" class="card__logo-img" src="img/logos/psbank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">ДК «Твой кэшбэк» МИР</h3>
+<p class="card__bank">Промсвязьбанк</p>
+</div>
+<ul class="card__features">
+<li><b>10%</b> маркетплейсы и супермаркеты</li>
+<li><b>До 5%</b> в 3 категориях из 20</li>
+<li><b>0 ₽</b> обслуживание навсегда</li>
+<li><b>До 3000 ₽/мес</b> кэшбэк</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-psb-debit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://trk.ppdu.ru/click?uid=271515&amp;oid=1353&amp;erid=2SDnjeSSA6F&amp;siteId=6619" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="cards" data-offer-id="ubrr-debit">
+<img alt="УБРиР" class="card__logo-img" src="img/logos/ubrr.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">ДК «Моя жизнь» МИР</h3>
+<p class="card__bank">УБРиР</p>
+</div>
+<ul class="card__features">
+<li><b>До 6%</b> в 4 категориях</li>
+<li><b>Кэшбэк на ЖКУ</b></li>
+<li><b>До 3000 ₽/мес</b> (до 5000 ₽ с подпиской)</li>
+<li><b>0 ₽</b> обслуживание</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-ubrr-debit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/1867bp9622pll/24fa4yrmk2mdi/?partner=215481&amp;erid=2SDnjd7A3GN&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="cards" data-offer-id="otp-debit">
+<img alt="ОТП" class="card__logo-img" src="img/logos/otpbank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Дебетовая ОТП Карта</h3>
+<p class="card__bank">ОТП Банк</p>
+</div>
+<ul class="card__features">
+<li><b>1000 ₽</b> за оформление</li>
+<li><b>До 10% кэшбэк</b> в топ-категориях</li>
+<li><b>До 3000 ₽/мес</b> кэшбэк</li>
+<li><b>0 ₽</b> обслуживание и доставка</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-otp-debit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://go.leadgid.ru/aff_c?aff_id=122894&amp;offer_id=6626&amp;p=11339&amp;erid=2W5zFFwAUp9" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<!-- КРЕДИТНЫЕ КАРТЫ -->
+<div class="card" data-category="credit" data-offer-id="vtb-credit">
+<img alt="ВТБ" class="card__logo-img" src="img/logos/vtb.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Кредитная карта</h3>
+<p class="card__bank">Банк ВТБ</p>
+</div>
+<ul class="card__features">
+<li><b>До 1 000 000 ₽</b> лимит</li>
+<li><b>200 дней</b> первый льготный период</li>
+<li><b>Кэшбэк до 25%</b> рублями</li>
+<li><b>0 ₽</b> обслуживание</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-vtb-credit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/2y3t5vlo0y7ze/3n91cojklf9oe/?partner=215481&amp;erid=2SDnjeyZW6n&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="credit" data-offer-id="yandex-super-split">
+<img alt="Яндекс" class="card__logo-img" src="img/logos/bank.yandex.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Кредитная карта Супер Сплит</h3>
+<p class="card__bank">Яндекс Банк</p>
+</div>
+<ul class="card__features">
+<li><b>До 1 000 000 ₽</b> лимит</li>
+<li><b>Рассрочка</b> от 2 до 24 мес</li>
+<li><b>0 ₽</b> обслуживание</li>
+<li><b>Первый платёж</b> через месяц</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-yandex-super-split.html">Подробнее</a>
+<a class="btn btn--card" href="https://trk.ppdu.ru/click?uid=271515&amp;oid=2684&amp;erid=2SDnjdJuo9L" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="credit" data-offer-id="otp-credit">
+<img alt="ОТП" class="card__logo-img" src="img/logos/otpbank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Кредитная карта 120 дней без %</h3>
+<p class="card__bank">ОТП Банк</p>
+</div>
+<ul class="card__features">
+<li><b>120 дней</b> без процентов</li>
+<li><b>Рассрочка до 24 мес</b> в магазинах</li>
+<li><b>10% кэшбэк</b> в 5 категориях</li>
+<li><b>0 ₽</b> выпуск и доставка</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-otp-credit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://go.leadgid.ru/aff_c?aff_id=122894&amp;offer_id=7375&amp;p=11339&amp;erid=2W5zFFz8TNq" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="credit" data-offer-id="tbank-credit">
+<img alt="Т-Банк" class="card__logo-img" src="img/logos/tbank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Кредитная карта Платинум</h3>
+<p class="card__bank">Т-Банк</p>
+</div>
+<ul class="card__features">
+<li><b>До 1 000 000 ₽</b> лимит</li>
+<li><b>До 55 дней</b> без процентов</li>
+<li><b>120 дней</b> при переводе баланса</li>
+<li><b>Доставка курьером</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-tbank-credit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/3mfdk3hwwx3iu/3q8s9nqp1qx31/?partner=215481&amp;erid=2SDnjcK72Dz&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="credit" data-offer-id="zenit-credit">
+<img alt="ЗЕНИТ" class="card__logo-img" src="img/logos/zenit.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Кредитная карта «120 + 120»</h3>
+<p class="card__bank">Банк ЗЕНИТ</p>
+</div>
+<ul class="card__features">
+<li><b>До 2 000 000 ₽</b> лимит</li>
+<li><b>120 дней</b> на покупки</li>
+<li><b>120 дней</b> на снятие и переводы</li>
+<li><b>Кэшбэк до 35%</b> у партнёров</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-zenit-credit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/z1ufkv46li5l/3ml4ysk2e5otz/?partner=215481&amp;erid=2SDnjdkQATJ&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="credit" data-offer-id="uralsib-credit">
+<img alt="УРАЛСИБ" class="card__logo-img" src="img/logos/uralsib.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Кредитная карта</h3>
+<p class="card__bank">Банк Уралсиб</p>
+</div>
+<ul class="card__features">
+<li><b>До 1 000 000 ₽</b> лимит</li>
+<li><b>До 120 дней</b> без процентов</li>
+<li><b>Кэшбэк до 30%</b></li>
+<li><b>0 ₽</b> обслуживание навсегда</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-uralsib-credit-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://trk.ppdu.ru/click?uid=271515&amp;oid=1121&amp;erid=2SDnjbpvGx2" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="credit" data-offer-id="urban-card">
+<img src="img/logos/crediteurope.ru.png" alt="URBAN" class="card__logo-img">
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">URBAN CARD</h3>
+<p class="card__bank">Кредит Европа Банк</p>
+</div>
+<ul class="card__features">
+<li><b>До 600 000 ₽</b> лимит</li>
+<li><b>10% кэшбэк</b> на транспорт</li>
+<li><b>0 ₽</b> обслуживание</li>
+<li><b>Рассрочка 0%</b> в магазинах</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-urban-card.html">Подробнее</a>
+<a class="btn btn--card" href="https://trk.ppdu.ru/click?uid=271515&amp;oid=1489&amp;erid=2SDnjdLFXE2" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<!-- ЗАЙМЫ -->
+<div class="card" data-category="loans" data-offer-id="maxcredit-loan">
+<img alt="MAX" class="card__logo-img" src="img/logos/max.credit.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">MAX.CREDIT</h3>
+<p class="card__bank">МФО «Макс.Кредит»</p>
+</div>
+<ul class="card__features">
+<li><b>От 3 000 до 30 000 ₽</b></li>
+<li><b>0,8% в день</b></li>
+<li><b>До 30 дней</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-maxcredit-loan.html">Подробнее</a>
+<a class="btn btn--card" href="https://go.leadgid.ru/aff_c?aff_id=122894&amp;offer_id=5316&amp;p=11339&amp;erid=2W5zFK38Z1B" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="loans" data-offer-id="alfa-dengi">
+<img alt="А" class="card__logo-img" src="img/logos/alfabank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Альфа Деньги</h3>
+<p class="card__bank">МФО «А Деньги»</p>
+</div>
+<ul class="card__features">
+<li><b>До 50 000 ₽</b> лимит</li>
+<li><b>8 ₽/день</b> за каждую 1 000 ₽</li>
+<li><b>До 30 дней</b> с продлением</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-alfa-dengi-limit.html">Подробнее</a>
+<a class="btn btn--card" href="https://go.leadgid.ru/aff_c?aff_id=122894&amp;offer_id=6362&amp;p=11339&amp;erid=2W5zFHq5MGm" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="loans" data-offer-id="smartcash-loan">
+<img alt="УН" class="card__logo-img" src="img/logos/smartcash.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Умные Наличные</h3>
+<p class="card__bank">МФО «Умные Наличные»</p>
+</div>
+<ul class="card__features">
+<li><b>От 3 000 до 30 000 ₽</b></li>
+<li><b>0,8% в день</b></li>
+<li><b>От 5 до 30 дней</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-smartcash-loan.html">Подробнее</a>
+<a class="btn btn--card" href="https://go.leadgid.ru/aff_c?aff_id=122894&amp;offer_id=5562&amp;p=11339&amp;erid=2W5zFJaGS32" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="loans" data-offer-id="bistrodengi-loan">
+<img alt="БД" class="card__logo-img" src="img/logos/bistrodengi.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Быстроденьги</h3>
+<p class="card__bank">МФК «Быстроденьги»</p>
+</div>
+<ul class="card__features">
+<li><b>От 3 000 до 100 000 ₽</b></li>
+<li><b>Ставка</b> от 0,8% в день</li>
+<li><b>До 180 дней</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-bistrodengi-loan.html">Подробнее</a>
+<a class="btn btn--card" href="https://go.leadgid.ru/aff_c?aff_id=122894&amp;offer_id=4464&amp;p=11339&amp;erid=2W5zFGAk8BT" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<div class="card" data-category="loans" data-offer-id="moneyman-loan">
+<img alt="MM" class="card__logo-img" src="img/logos/moneyman.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">MoneyMan</h3>
+<p class="card__bank">МФК «Мани Мен»</p>
+</div>
+<ul class="card__features">
+<li><b>До 80 000 ₽</b> сумма</li>
+<li><b>До 18 недель</b></li>
+<li><b>Нужен только паспорт</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-moneyman-loan.html">Подробнее</a>
+<a class="btn btn--card" href="https://go.leadgid.ru/aff_c/?aff_id=122894&amp;offer_id=5024&amp;p=11339&amp;erid=LjN8KHDvg" rel="nofollow sponsored noopener" target="_blank">Оформить</a>
+</div>
+</div>
+<!-- ВКЛАДЫ -->
+<div class="card" data-category="deposit" data-offer-id="yandex-save">
+<img alt="Яндекс" class="card__logo-img" src="img/logos/bank.yandex.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Накопительный счёт Сейв</h3>
+<p class="card__bank">Яндекс Банк</p>
+</div>
+<ul class="card__features">
+<li><b>До 15%</b> годовых</li>
+<li><b>Ежедневное</b> начисление</li>
+<li><b>Без ограничений</b> на снятие</li>
+<li><b>От 0,01 ₽</b> минимальная сумма</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-yandex-save.html">Подробнее</a>
+<a class="btn btn--card" href="https://trk.ppdu.ru/click?uid=271515&amp;oid=2685&amp;erid=2SDnjck9Tog" rel="nofollow sponsored noopener" target="_blank">Открыть счёт</a>
+</div>
+</div>
+<div class="card" data-category="deposit" data-offer-id="gpb-deposit">
+<img alt="ГПБ" class="card__logo-img" src="img/logos/gazprombank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Накопительный счёт «Доходный»</h3>
+<p class="card__bank">Газпромбанк</p>
+</div>
+<ul class="card__features">
+<li><b>До 14%</b> годовых</li>
+<li><b>Без ограничений</b> на снятие и пополнение</li>
+<li><b>Без ограничений</b> по сумме и сроку</li>
+<li><b>Приветственная надбавка</b> в первые 2 месяца</li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-gpb-deposit.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/3v3xnhlnk8f49/25sul61262zaw/?partner=215481&amp;erid=2SDnjduAaZ1&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Открыть счёт</a>
+</div>
+</div>
+<div class="card" data-category="deposit" data-offer-id="gpb-newmoney">
+<img alt="ГПБ" class="card__logo-img" src="img/logos/gazprombank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Вклад «Новые деньги»</h3>
+<p class="card__bank">Газпромбанк</p>
+</div>
+<ul class="card__features">
+<li><b>До 13,6%</b> годовых</li>
+<li><b>Надбавка 3%</b> за «новые деньги»</li>
+<li><b>От 15 000 ₽</b> онлайн</li>
+<li><b>Срок от 61 до 1095 дней</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-gpb-newmoney.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/117pd3xvgx9da/1b3xlltwjlt5/?partner=215481&amp;erid=2SDnjd8UuRb&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Открыть вклад</a>
+</div>
+</div>
+<div class="card" data-category="deposit" data-offer-id="gpb-keymoment">
+<img alt="ГПБ" class="card__logo-img" src="img/logos/gazprombank.ru.png"/>
+<div class="card__body">
+<div class="card__head">
+<h3 class="card__title">Вклад «Ключевой момент»</h3>
+<p class="card__bank">Газпромбанк</p>
+</div>
+<ul class="card__features">
+<li><b>До 16%</b> годовых</li>
+<li><b>Ставка зависит</b> от ключевой ставки ЦБ</li>
+<li><b>От 100 000 ₽</b> минимальная сумма</li>
+<li><b>Срок от 120 до 1095 дней</b></li>
+</ul>
+</div>
+<div class="card__actions">
+<a class="btn btn--outline" href="product-gpb-keymoment.html">Подробнее</a>
+<a class="btn btn--card" href="https://u-cpa.ru/offer/rs/34abfh8bmkvcj/1d7eoiz16u2jc/?partner=215481&amp;erid=2SDnjd9xthw&amp;platform_id=40513" rel="nofollow sponsored noopener" target="_blank">Открыть вклад</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footer__inner">
+<div class="footer__col">
+<h4>BankiPlace</h4>
+<p>Маркетплейс финансовых продуктов.</p>
+</div>
+<div class="footer__col">
+<h4>Продукты</h4>
+<a href="debit-cards.html">Дебетовые карты</a>
+<a href="credit-cards.html">Кредитные карты</a>
+<a href="loans.html">Займы</a>
+<a href="deposits.html">Вклады</a>
+</div>
+<div class="footer__col">
+<h4>Информация</h4>
+<a href="blog.html">Блог</a>
+<a href="privacy.html">Политика конфиденциальности</a>
+<a href="terms.html">Пользовательское соглашение</a>
+</div>
+</div>
+<div class="footer__bottom">
+<p>© 2026 BankiPlace. Все права защищены. 18+</p>
+<div class="disclaimer">
+<p>BankiPlace не является банком, МФО, брокером или инвестиционным советником. Сайт носит исключительно информационный характер. Все продукты предоставляются соответствующими организациями. Перед оформлением проверяйте условия на официальном сайте партнёра.</p>
+</div>
+</div>
+</div>
+</footer>
+<button aria-label="Наверх" class="scroll-top" id="scrollTop">↑</button>
+<script src="js/script.js"></script>
 </body>
 </html>
